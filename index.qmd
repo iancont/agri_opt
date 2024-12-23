@@ -1,6 +1,6 @@
 ---
-title: Optimizacion Agricola
+title: Optimización Agricola
 ---
 
 ## Section
-This is a simple placeholder for the manuscript's main document [@knuth84].
+This is a simple placeholder for the manuscript's main document 

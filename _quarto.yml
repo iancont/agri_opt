@@ -1,8 +1,9 @@
 project:
-  type: manuscript
-
-manuscript:
-  article: index.qmd
+  type: default
+  output-dir: _output
+  render:
+    - index.qmd
+    - ppt.qmd
 
 format:
   typst:
@@ -34,10 +35,9 @@ affiliations:
     city: Santo Domingo
     country: República Dominicana
 
-
+toc: true
 bibliography: references.bib
 lang: es
-
 date: last-modified
 
 execute:
