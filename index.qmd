@@ -1,5 +1,10 @@
 ---
 title: Optimización Agricola
+format:
+    typst:
+        filters:
+        - at: pre-quarto
+            path: _extensions/andrewheiss/wordcount/wordcount.lua
 ---
 
 ## Section

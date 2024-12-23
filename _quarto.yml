@@ -5,11 +5,6 @@ project:
     - index.qmd
     - ppt.qmd
 
-format:
-  typst:
-    filters:
-      - at: pre-quarto
-        path: _extensions/andrewheiss/wordcount/wordcount.lua
 
 author:
   - name: Ian Contreras
@@ -28,6 +23,7 @@ author:
     attributes:
       corresponding: true
 
+
 affiliations:
   - id: Intec
     name: Instituto Tecnológico de Santo Domingo
@@ -35,14 +31,13 @@ affiliations:
     city: Santo Domingo
     country: República Dominicana
 
+
 toc: true
 bibliography: references.bib
 lang: es
 date: last-modified
 
+
 execute:
   freeze: true
   cache: true 
-
-
-
