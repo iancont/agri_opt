@@ -1,0 +1,48 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  typst:
+    filters:
+      - at: pre-quarto
+        path: _extensions/andrewheiss/wordcount/wordcount.lua
+
+author:
+  - name: Ian Contreras
+    emails:
+      - personal: contreras.mejia@hotmail.com
+      - institutional: 1116048@est.intec.edu.do
+    phone: 809-856-0531
+    affiliations:
+      id: Intec
+    attributes:
+      corresponding: true
+  
+  - name: Elvis Lagrange
+    affiliations:
+      id: Intec
+    attributes:
+      corresponding: true
+
+affiliations:
+  - id: Intec
+    name: Instituto Tecnológico de Santo Domingo
+    department: Economía y Negocios
+    city: Santo Domingo
+    country: República Dominicana
+
+
+bibliography: references.bib
+lang: es
+
+date: last-modified
+
+execute:
+  freeze: true
+  cache: true 
+
+
+
