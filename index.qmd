@@ -9,5 +9,5 @@ format:
 
 ## Section
 
-algun cambio para practicar con elvis
+
 This is a simple placeholder for the manuscript's main document 
