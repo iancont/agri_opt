@@ -7,7 +7,35 @@ format:
             path: _extensions/andrewheiss/wordcount/wordcount.lua
 ---
 
-## Section
+## Planificación de un proyecto agroforestal en la República Dominicana (Cambiar el nombre de este inciso)
 
-algun cambio para practicar con elvis
-This is a simple placeholder for the manuscript's main document 
+El sector agrícola constituye uno de los sectores más importante para la República, pues en la encargada de proveer de los alimentos esenciales para los dominicanos, tanto los productores agropecuarios como otros actores son piezas claves en este proceso. Los productores dominicanos producen una enorme variedad de rubros agropecuarios lo que lo convierte en uno de los sectores más diversos.
+
+Gran parte de los poductores agrícolas en la República Dominicana, cultivan diferentes variedades de rubros agrícolas, con el objetivo de mitigar los riesgos asociados a los peligros climáticos y a su vez, garantizar la protección de su producción ante fluctuaciones del mercado. Esto puede dificultar el manejo óptimo de la producción (eleeción óptimo de los rubros, manejo de pesticidas, uso de fertilizantes etc). 
+
+Ante esta situación es crucial para los productores agrícolas saber la combinanción de rubros agrícolas que maximicen sus beneficios. Para ello se pueden incorporar diferentes métodos matemáticos.En el trabajo de Miao et al. (2023), se utilizó el modelo de portafolio para ayudar a los agricultores a distribuir eficientemente sus recursos (tierra, agua y trabajo) entre diferentes cultivos, maximizando beneficios y minimizando riesgos. Este método, inspirado en inversiones financieras, mostró que asignar más recursos a cultivos como chile y melón mejoraba las ganancias y la eficiencia, sin aumentar el riesgo. Es una herramienta útil para que los agricultores optimicen su producción de forma calculada y sostenible.
+
+
+
+
+## Metodología
+
+
+Para la optimización de portafolios, es necesario conocer los rendimientos de los activos. En este caso, se emplearán como activos 12 rubros agrícolas: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano.
+
+El cálculo de los rendimientos se basa en la productividad promedio anual de cada cultivo, medida en kilogramos por tarea (kg/tarea), los precios promedio anuales al productor (en RD$/kg) de cada uno de los cultivos, los costos anuales de producción de los rubros agrícolas por tarea y el ciclo de cosecha de cada bien agrícola. Todos estos datos fueron extraídos del Ministerio de Agricultura de la República Dominicana. A continuación, se presenta la fórmula empleada para el cálculo de los rendimientos
+$$
+\frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
+$$
+El uso de los costos totales como denominador se justifica en su capacidad para reflejar de manera más precisa los gastos recurrentes relacionados a la producción, especialmente en ausencia de datos claros sobre costos fijos iniciales. Además, los costos normales son más representativos de la variabilidad en la producción y a su vez simplifcan el análisis al brindar una medida dinámica y facílmente calculable.
+
+## Descripción general de los rendimientos de los rubros agrícolas
+
+Al analizar los rendimientos anuales de los rubros agrícolas en el período 2002-2022, se observa patrones diversos en su comportamiento. Rubros como el arroz, ñame, plátano y berenjena muestran una tendencia relativamente estable, con rendimientos que se mantienen mayoritariamente entre -2% y 2%, lo cual evidencia una dinámica de producción consistente y menos expuesta a fluctuaciones externas significativas.
+Por otro lado, cultivos como el aguacate y la auyama destacan por su mayor volatilidad, con el aguacate registrando un pico notable que alcanza hasta un 12% alrededor de 2016, seguido de una caída pronunciada. La auyama, por su parte, muestra una tendencia marcadamente alcista en los últimos años, alcanzando rendimientos superiores al 10% hacia el final del período, lo que sugiere mejoras significativas en sus condiciones de producción.
+La yuca presenta un comportamiento moderadamente volátil, con fluctuaciones que se mueven entre 0% y 2%, mostrando picos ocasionales cercanos al 2% a lo largo del período. En cuanto a la papa, esta exhibe una volatilidad notable con rendimientos que oscilan entre 0% y 3%, mostrando una serie de picos y valles que reflejan la sensibilidad del cultivo a diversos factores externos.
+El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras que la batata mantiene un comportamiento relativamente estable hasta un incremento notable hacia 2020, superando el 2%. La yautía presenta un patrón particular con un pico significativo al inicio del período, seguido de una estabilización en niveles más moderados.
+
+
+
+ 
