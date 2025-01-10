@@ -5,26 +5,46 @@ format:
         filters:
         - at: pre-quarto
             path: _extensions/andrewheiss/wordcount/wordcount.lua
+toc: false
+lang: es-RD
+fontsize: "12pt"
+fontfamily: "kpfonts"
+urlcolor: "blue"
+number-sections: true
+margin-left: "2.54cm"
+margin-right: "2.54cm"
+margin-top: "2.54cm"
+margin-bottom: "2.54cm"
+editor: visual
+  markdown: 
+    wrap: 72
+bibliography: references.bib
+csl: apa.csl
+link-citations: true
 ---
 
 # Introducción
-## Contexto
-El sector agrícola en la República Dominicana juega un papel crucial en el desarrollo económico y social del país. Según datos del Banco Central (2023), esta actividad representa el 3% del Producto Interno Bruto (PIB) y genera empleo para aproximadamente 361,063 personas. Sin embargo, el empleo en este sector presenta un alto grado de informalidad, con el 89% de los trabajadores en condiciones no formales. Además, las exportaciones agropecuarias, que abarcan una diversidad de productos, constituyen el 6.4% de las exportaciones totales, reafirmando la importancia de este sector en la economía nacional.
 
-Históricamente, las decisiones de los agricultores sobre qué cultivos sembrar han dependido en gran medida de conocimientos empíricos, patrones climáticos y recursos disponibles. Estas elecciones, aunque orientadas a garantizar la seguridad alimentaria y minimizar riesgos climáticos, no siempre han priorizado la maximización del rendimiento económico. En este contexto, los pequeños productores, que representan el 77% del total y poseen parcelas menores a 4.5 hectáreas, enfrentan mayores desafíos. Por otro lado, el 10% de los grandes productores controla el 61% de las tierras agrícolas, lo que genera desigualdades significativas en el acceso a recursos, tecnología y mercados (FAO, 2022).
+## Contexto
+
+El sector agrícola en la República Dominicana juega un papel crucial en el desarrollo económico y social del país. Según datos del Banco Central de la República Dominicana, esta actividad representa el 3% del Producto Interno Bruto (PIB) y genera empleo para aproximadamente 361,063 personas. Sin embargo, el empleo en este sector presenta un alto grado de informalidad, con el 89% de los trabajadores en condiciones no formales. Además, las exportaciones agropecuarias, que abarcan una diversidad de productos, constituyen el 6.4% de las exportaciones totales, reafirmando la importancia de este sector en la economía nacional.
+
+Históricamente, las decisiones de los agricultores sobre qué cultivos sembrar han dependido en gran medida de conocimientos empíricos, patrones climáticos y recursos disponibles. Estas elecciones, aunque orientadas a garantizar la seguridad alimentaria y minimizar riesgos climáticos, no siempre han priorizado la maximización del rendimiento económico. En este contexto, los pequeños productores, que representan el 77% del total y poseen parcelas menores a 4.5 hectáreas, enfrentan mayores desafíos. Por otro lado, el 10% de los grandes productores controla el 61% de las tierras agrícolas, lo que genera desigualdades significativas en el acceso a recursos, tecnología y mercados [@FAO2022].
 
 A nivel comercial, los intermediarios juegan un papel dominante en la cadena de valor, y su poder de negociación a menudo desfavorece a los pequeños agricultores. Asimismo, la falta de una infraestructura rural adecuada, como caminos, sistemas de riego y centros de almacenamiento, ha dificultado el crecimiento sostenible del sector y ha incrementado los costos de producción, afectando especialmente a los productores más vulnerables.
 
 ## Limitaciones del Sector Agrícola
-El sector agrícola dominicano enfrenta una variedad de limitaciones que dificultan su desarrollo sostenible y competitivo. De acuerdo con la FAO (2022), el cambio climático representa uno de los desafíos más significativos para los agricultores, ya que fenómenos como sequías, huracanes e inundaciones recurrentes generan pérdidas importantes en la producción y afectan la estabilidad económica de los productores. Estas condiciones adversas no solo incrementan los costos operativos, sino que también desincentivan la inversión en tecnologías que podrían mejorar la resiliencia del sector.
 
-Otra problemática destacada es la insuficiencia de infraestructura básica y productiva. Según datos recopilados por Julio Solano (2024), la falta de caminos interparcelarios, sistemas de manejo de agua y almacenes adecuados incrementa los costos de producción en hasta un 40%, afectando la competitividad de los productos agrícolas dominicanos tanto en el mercado local como en el internacional. Adicionalmente, las pérdidas postcosecha alcanzan entre el 15% y el 20% debido a la inexistencia de plantas de secado y centros de almacenamiento especializados.
+El sector agrícola dominicano enfrenta una variedad de limitaciones que dificultan su desarrollo sostenible y competitivo. De acuerdo con la @FAO2022, el cambio climático representa uno de los desafíos más significativos para los agricultores, ya que fenómenos como sequías, huracanes e inundaciones recurrentes generan pérdidas importantes en la producción y afectan la estabilidad económica de los productores. Estas condiciones adversas no solo incrementan los costos operativos, sino que también desincentivan la inversión en tecnologías que podrían mejorar la resiliencia del sector.
+
+Otra problemática destacada es la insuficiencia de infraestructura básica y productiva. Según datos recopilados por @solano2024, la falta de caminos interparcelarios, sistemas de manejo de agua y almacenes adecuados incrementa los costos de producción en hasta un 40%, afectando la competitividad de los productos agrícolas dominicanos tanto en el mercado local como en el internacional. Adicionalmente, las pérdidas postcosecha alcanzan entre el 15% y el 20% debido a la inexistencia de plantas de secado y centros de almacenamiento especializados.
 
 El acceso limitado a financiamiento y seguros agropecuarios constituye otra restricción significativa. Según un informe de la CEPAL (2013), la mayoría de los pequeños productores carece de acceso a herramientas financieras que les permitan mitigar riesgos y recuperarse de eventos adversos. La falta de promoción de seguros, sumada a los elevados costos de las primas y al desconocimiento de sus beneficios, perpetúa la vulnerabilidad económica de estos agricultores. Asimismo, los elevados precios de insumos como fertilizantes, semillas y combustibles, combinados con la baja tecnificación, dificultan la modernización del sector y reducen su competitividad en comparación con otros países de la región.
 
-Por otro lado, la expansión urbana y turística ha ejercido una fuerte presión sobre las tierras agrícolas. Según Solano (2024), más del 30% de estas tierras está en riesgo de ser destinadas a proyectos residenciales y turísticos, lo que no solo amenaza la seguridad alimentaria, sino que también incrementa la desigualdad territorial y económica. Esta situación se agrava con el limitado acceso a mercados eficientes, donde los pequeños productores son los más perjudicados por la falta de infraestructura de comercialización y los altos costos de transporte.
+Por otro lado, la expansión urbana y turística ha ejercido una fuerte presión sobre las tierras agrícolas. Según @solano2024, más del 30% de estas tierras está en riesgo de ser destinadas a proyectos residenciales y turísticos, lo que no solo amenaza la seguridad alimentaria, sino que también incrementa la desigualdad territorial y económica. Esta situación se agrava con el limitado acceso a mercados eficientes, donde los pequeños productores son los más perjudicados por la falta de infraestructura de comercialización y los altos costos de transporte.
 
 ## El problema del subaseguramiento y sus implicaciones en el sector agrícola
+
 En la República Dominicana, la penetración de los seguros agropecuarios es extremadamente baja, una problemática que afecta negativamente la resiliencia y la estabilidad económica de los productores agrícolas. Según datos de la CEPAL (2013), el acceso limitado a seguros en la región es incluso inferior al promedio africano, lo que refleja la falta de mecanismos financieros adecuados para mitigar los riesgos asociados a fenómenos climáticos extremos, fluctuaciones de precios y otras adversidades.
 
 La falta de seguros agropecuarios expone a los agricultores a una mayor vulnerabilidad. Sin esta herramienta, los productores enfrentan directamente el impacto de eventos climáticos adversos, como huracanes y sequías, así como de las oscilaciones en los precios de los productos agrícolas. Esto implica que las pérdidas económicas derivadas de estas situaciones recaen completamente sobre los productores, quienes muchas veces carecen de la capacidad financiera para recuperarse rápidamente. Esta situación limita la capacidad de los agricultores para mantener una producción estable y sostenible, afectando negativamente su ingreso y calidad de vida.
@@ -33,9 +53,9 @@ Además, la ausencia de seguros agropecuarios tiene implicaciones significativas
 
 Las causas del subaseguramiento incluyen la falta de promoción adecuada de los seguros, el desconocimiento de sus beneficios y los altos costos de las primas. Estas barreras limitan significativamente la adopción de estos productos por parte de los agricultores. No obstante, se han identificado algunas iniciativas para abordar esta problemática, como los subsidios a las primas de seguro y los programas piloto diseñados específicamente para pequeños productores. Estas medidas buscan incrementar la cobertura de los seguros agropecuarios y fomentar su adopción como una estrategia clave para mitigar riesgos.
 
-
 ## El Problema de la Informalidad y la Baja Tecnificación en el Sector Agrícola
-En el sector agrícola dominicano, la informalidad y la baja tecnificación se destacan como obstáculos significativos que limitan el crecimiento y la eficiencia de la actividad agropecuaria. Según la FAO (2022), alrededor del 87% de los trabajadores agrícolas se encuentran en condiciones de empleo informal, lo que implica que no cuentan con acceso a la seguridad social ni a otros beneficios laborales básicos. Esta situación no solo vulnera los derechos de los trabajadores, sino que también debilita la estabilidad económica y social de las comunidades rurales.
+
+En el sector agrícola dominicano, la informalidad y la baja tecnificación se destacan como obstáculos significativos que limitan el crecimiento y la eficiencia de la actividad agropecuaria. Según la @FAO2022, alrededor del 87% de los trabajadores agrícolas se encuentran en condiciones de empleo informal, lo que implica que no cuentan con acceso a la seguridad social ni a otros beneficios laborales básicos. Esta situación no solo vulnera los derechos de los trabajadores, sino que también debilita la estabilidad económica y social de las comunidades rurales.
 
 La informalidad, además, está estrechamente relacionada con los bajos niveles educativos predominantes entre los trabajadores agrícolas. Esta falta de formación limita la capacidad de los productores para adoptar tecnologías modernas y prácticas sostenibles que podrían mejorar significativamente su productividad. Por ejemplo, muchas de las tecnologías diseñadas para optimizar los sistemas de riego, monitoreo de cultivos y manejo de suelos requieren conocimientos básicos que los pequeños productores, en su mayoría, no poseen.
 
@@ -43,10 +63,9 @@ La baja tecnificación en el sector también es consecuencia de la falta de acce
 
 Este panorama genera un círculo vicioso donde la informalidad y la baja tecnificación perpetúan bajos niveles de productividad y competitividad, afectando negativamente la capacidad del sector agrícola para contribuir de manera significativa al desarrollo económico del país. La necesidad de fomentar programas educativos orientados a mejorar las habilidades técnicas de los productores es crucial para romper este ciclo y promover una agricultura más eficiente y sostenible.
 
-El Problema de la Informalidad y la Baja Tecnificación y sus Implicaciones en la Productividad Agrícola Dominicana
-La agricultura dominicana enfrenta un conjunto de limitaciones estructurales que afectan su capacidad de crecimiento y competitividad, entre las cuales destacan la informalidad laboral y la baja tecnificación. Estos factores están profundamente interrelacionados y tienen implicaciones significativas en la productividad del sector.
+El Problema de la Informalidad y la Baja Tecnificación y sus Implicaciones en la Productividad Agrícola Dominicana La agricultura dominicana enfrenta un conjunto de limitaciones estructurales que afectan su capacidad de crecimiento y competitividad, entre las cuales destacan la informalidad laboral y la baja tecnificación. Estos factores están profundamente interrelacionados y tienen implicaciones significativas en la productividad del sector.
 
-La alta informalidad laboral, que afecta al 87% de los trabajadores agrícolas según la FAO (2022), implica que la mayoría de ellos carece de acceso a la seguridad social y a condiciones laborales estables. Esta situación no solo vulnera sus derechos, sino que también reduce los incentivos para invertir en su formación y desarrollo profesional. Como resultado, los trabajadores agrícolas suelen operar con conocimientos básicos y prácticas tradicionales que limitan la eficiencia en las labores productivas.
+La alta informalidad laboral, que afecta al 87% de los trabajadores agrícolas según la @FAO2022, implica que la mayoría de ellos carece de acceso a la seguridad social y a condiciones laborales estables. Esta situación no solo vulnera sus derechos, sino que también reduce los incentivos para invertir en su formación y desarrollo profesional. Como resultado, los trabajadores agrícolas suelen operar con conocimientos básicos y prácticas tradicionales que limitan la eficiencia en las labores productivas.
 
 Por otro lado, la baja tecnificación está estrechamente vinculada con el limitado acceso a recursos económicos y programas de capacitación técnica. Muchas de las tecnologías modernas diseñadas para optimizar los procesos agrícolas, como los sistemas de riego por goteo, drones para monitoreo de cultivos y fertilización de precisión, son financieramente inaccesibles para los pequeños agricultores. Esto se agrava por la falta de iniciativas públicas y privadas que promuevan la adopción de estas herramientas, así como por la ausencia de programas educativos en las zonas rurales que preparen a los agricultores para utilizarlas de manera efectiva.
 
@@ -79,22 +98,20 @@ En términos de aseguramiento, los productores dominicanos cuentan principalment
 Algunas estrategias complementarias incluyen la acumulación de reservas y almacenamiento de productos, que permiten a los agricultores enfrentar períodos de escasez o caídas en los ingresos. No obstante, la efectividad de esta medida está restringida por la falta de infraestructura adecuada para el almacenamiento, lo que incrementa las pérdidas postcosecha. De igual manera, ciertos agricultores han comenzado a implementar sistemas agroforestales y prácticas de conservación de suelos, los cuales ayudan a mitigar riesgos climáticos al proteger el suelo y regular las condiciones del microclima. Estas medidas, aunque valiosas, requieren mayores niveles de conocimiento técnico y recursos iniciales que no todos los productores pueden permitirse.
 
 ## Motivación de la investigación
-Gran parte de los poductores agrícolas en la República Dominicana, cultivan diferentes variedades de rubros agrícolas, con el objetivo de mitigar los riesgos asociados a los peligros climáticos y a su vez, garantizar la protección de su producción ante fluctuaciones del mercado. Esto puede dificultar el manejo óptimo de la producción (eleeción óptimo de los rubros, manejo de pesticidas, uso de fertilizantes etc). 
 
-Ante esta situación es crucial para los productores agrícolas saber la combinanción de rubros agrícolas que maximicen sus beneficios. Para ello se pueden incorporar diferentes métodos matemáticos.En el trabajo de Miao et al. (2023), se utilizó el modelo de portafolio para ayudar a los agricultores a distribuir eficientemente sus recursos (tierra, agua y trabajo) entre diferentes cultivos, maximizando beneficios y minimizando riesgos. Este método, inspirado en inversiones financieras, mostró que asignar más recursos a cultivos como chile y melón mejoraba las ganancias y la eficiencia, sin aumentar el riesgo. Es una herramienta útil para que los agricultores optimicen su producción de forma calculada y sostenible.
+Gran parte de los poductores agrícolas en la República Dominicana, cultivan diferentes variedades de rubros agrícolas, con el objetivo de mitigar los riesgos asociados a los peligros climáticos y a su vez, garantizar la protección de su producción ante fluctuaciones del mercado. Esto puede dificultar el manejo óptimo de la producción (eleeción óptimo de los rubros, manejo de pesticidas, uso de fertilizantes etc).
+
+Ante esta situación es crucial para los productores agrícolas saber la combinanción de rubros agrícolas que maximicen sus beneficios. Para ello se pueden incorporar diferentes métodos matemáticos.En el trabajo de @miao2023, se utilizó el modelo de portafolio para ayudar a los agricultores a distribuir eficientemente sus recursos (tierra, agua y trabajo) entre diferentes cultivos, maximizando beneficios y minimizando riesgos. Este método, inspirado en inversiones financieras, mostró que asignar más recursos a cultivos como chile y melón mejoraba las ganancias y la eficiencia, sin aumentar el riesgo. Es una herramienta útil para que los agricultores optimicen su producción de forma calculada y sostenible.
 
 El objetivo principal de esta investigación es desarrollar un método de optimización de portafolio enfocado en la selección óptima de cultivos, con el fin de maximizar los beneficios económicos y minimizar los riesgos para los productores agrícolas en la República Dominicana. Este enfoque se basa en identificar combinaciones de cultivos que permitan a los agricultores tomar decisiones fundamentadas y estratégicas frente a las limitaciones del sector, como la falta de aseguramiento y las fluctuaciones del mercado. La metodología busca ofrecer una herramienta adaptable y eficiente que contribuya a mejorar la sostenibilidad económica del sector agrícola dominicano, proporcionando soluciones prácticas para enfrentar los desafíos actuales.
-
 
 ## Metodología
 
 La optimización de portafolios en esta investigación se basa en el cálculo de rendimientos agrícolas, tomando como activos 12 cultivos clave: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano. La elección de estos cultivos responde a dos factores principales. En primer lugar, se seleccionaron debido a su alta disponibilidad, facilitando así el análisis de rendimientos y costos de producción. En segundo lugar, estos rubros tienen una gran relevancia en la dieta dominicana, lo que asegura que los resultados del modelo sean representativos y aplicables para los agricultores que buscan maximizar su rentabilidad en contextos locales.
 
-El cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo. Todos estos datos fueron obtenidos del Ministerio de Agricultura de la República Dominicana. La fórmula utilizada es la siguiente:
-$$
+El cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo. Todos estos datos fueron obtenidos del Ministerio de Agricultura de la República Dominicana. La fórmula utilizada es la siguiente: $$
 \frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
-$$
-El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Esta metodología no solo simplifica el análisis, sino que también resulta más dinámica al no depender de datos detallados sobre la inversión inicial, los cuales suelen ser difíciles de obtener en el contexto agrícola dominicano.
+$$ El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Esta metodología no solo simplifica el análisis, sino que también resulta más dinámica al no depender de datos detallados sobre la inversión inicial, los cuales suelen ser difíciles de obtener en el contexto agrícola dominicano.
 
 La elección de los costos totales como denominador tiene varias ventajas. En primer lugar, proporciona una visión más precisa de los gastos recurrentes que los agricultores enfrentan en cada ciclo de producción. Este enfoque también captura mejor la variabilidad de los costos entre diferentes cultivos, permitiendo comparaciones más exactas entre ellos. Además, al centrarse en los costos normales, se logra un modelo más adaptable y práctico, que puede ser implementado fácilmente por los agricultores o asesores técnicos sin necesidad de un análisis financiero complejo.
 
@@ -102,16 +119,11 @@ En términos de implicaciones, esta metodología ofrece varias ventajas signific
 
 ## Descripción general de los rendimientos de los rubros agrícolas
 
-Al analizar los rendimientos anuales de los rubros agrícolas en el período 2002-2022, se observa patrones diversos en su comportamiento. Rubros como el arroz, ñame, plátano y berenjena muestran una tendencia relativamente estable, con rendimientos que se mantienen mayoritariamente entre -2% y 2%, lo cual evidencia una dinámica de producción consistente y menos expuesta a fluctuaciones externas significativas.
-Por otro lado, cultivos como el aguacate y la auyama destacan por su mayor volatilidad, con el aguacate registrando un pico notable que alcanza hasta un 12% alrededor de 2016, seguido de una caída pronunciada. La auyama, por su parte, muestra una tendencia marcadamente alcista en los últimos años, alcanzando rendimientos superiores al 10% hacia el final del período, lo que sugiere mejoras significativas en sus condiciones de producción.
-La yuca presenta un comportamiento moderadamente volátil, con fluctuaciones que se mueven entre 0% y 2%, mostrando picos ocasionales cercanos al 2% a lo largo del período. En cuanto a la papa, esta exhibe una volatilidad notable con rendimientos que oscilan entre 0% y 3%, mostrando una serie de picos y valles que reflejan la sensibilidad del cultivo a diversos factores externos.
-El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras que la batata mantiene un comportamiento relativamente estable hasta un incremento notable hacia 2020, superando el 2%. La yautía presenta un patrón particular con un pico significativo al inicio del período, seguido de una estabilización en niveles más moderados.
+Al analizar los rendimientos anuales de los rubros agrícolas en el período 2002-2022, se observa patrones diversos en su comportamiento. Rubros como el arroz, ñame, plátano y berenjena muestran una tendencia relativamente estable, con rendimientos que se mantienen mayoritariamente entre -2% y 2%, lo cual evidencia una dinámica de producción consistente y menos expuesta a fluctuaciones externas significativas. Por otro lado, cultivos como el aguacate y la auyama destacan por su mayor volatilidad, con el aguacate registrando un pico notable que alcanza hasta un 12% alrededor de 2016, seguido de una caída pronunciada. La auyama, por su parte, muestra una tendencia marcadamente alcista en los últimos años, alcanzando rendimientos superiores al 10% hacia el final del período, lo que sugiere mejoras significativas en sus condiciones de producción. La yuca presenta un comportamiento moderadamente volátil, con fluctuaciones que se mueven entre 0% y 2%, mostrando picos ocasionales cercanos al 2% a lo largo del período. En cuanto a la papa, esta exhibe una volatilidad notable con rendimientos que oscilan entre 0% y 3%, mostrando una serie de picos y valles que reflejan la sensibilidad del cultivo a diversos factores externos. El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras que la batata mantiene un comportamiento relativamente estable hasta un incremento notable hacia 2020, superando el 2%. La yautía presenta un patrón particular con un pico significativo al inicio del período, seguido de una estabilización en niveles más moderados.
 
-Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de producción y rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en cultivos de mayor costo o riesgo, forzando a muchos pequeños agricultores a optar por estrategias más conservadoras, lo cual limita su potencial de ganancias y aumenta su exposición a riesgos específicos.
+Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de larentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en cultivos de mayor costo o riesgo, forzando a muchos pequeños agricultores a optar por estrategias más conservadoras, lo cual limita su potencial de ganancias y aumenta su exposición a riesgos específicos.
 
 La volatilidad de los precios de los productos agrícolas puede traducirse en márgenes de ganancia más reducidos para los agricultores, especialmente en aquellos períodos en los que los costos de insumos, como fertilizantes o semillas, aumentan significativamente. Cuando los precios de los productos no reflejan de manera proporcional estos incrementos en los costos, los productores enfrentan una reducción en sus ingresos netos, lo que compromete la sostenibilidad de sus operaciones. Además, en ausencia de herramientas adecuadas como seguros agropecuarios, los agricultores más afectados por estas fluctuaciones pueden quedar atrapados en ciclos de endeudamiento, limitando aún más su capacidad de inversión y crecimiento.
-
-
 
 ```{r}
 #| include: false
@@ -138,7 +150,6 @@ library(reshape2)
 library(stargazer)
 ```
 
-
 ```{r}
 #| include: false
 library(readxl)
@@ -146,8 +157,8 @@ dataset <- read_excel("dataset.xlsx", sheet = "data_anual")
 view(dataset)
 ```
 
+**Tabla.** Estadísticas descriptivas de precios por rubro
 
-** Tabla #.** Estadísticas descriptivas de precios por rubro
 ```{r}
 #| echo: false
 
@@ -176,9 +187,9 @@ stats %>%
   )
 
 ```
- 
- 
-** Gráfica #. Evolución de los precios
+
+**Gráfica \#**. Evolución de los precios de los rubros agrícolas
+
 ```{r}
 #| echo: false
 ggplot(data_clean, aes(x = Año, y = Precio_kg, color = Rubro, group = Rubro)) +
@@ -187,9 +198,9 @@ ggplot(data_clean, aes(x = Año, y = Precio_kg, color = Rubro, group = Rubro)) +
   theme_minimal() +
   theme(legend.position = "bottom")
 ```
- 
- 
+
 **Tabla #.** Matriz de correlación de precios por rubro
+
 ```{r}
 #| echo: false
 pivoted_data <- as_tibble(data_clean %>%
@@ -210,4 +221,3 @@ cor_matrix %>%
   kable(format = "html", caption = "Matriz de correlación de precios por rubro") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F)
 ```
- 
