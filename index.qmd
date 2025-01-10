@@ -1,13 +1,9 @@
 ---
 title: Optimización Agricola
-format:
-    typst:
-        filters:
-        - at: pre-quarto
-            path: _extensions/andrewheiss/wordcount/wordcount.lua
+format: typst
 ---
 
 ## Section
 
+Empezar aquí 
 
-This is a simple placeholder for the manuscript's main document 
