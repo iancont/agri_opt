@@ -26,6 +26,7 @@ El cálculo de los rendimientos se basa en la productividad promedio anual de ca
 $$
 \frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
 $$
+
 El uso de los costos totales como denominador se justifica en su capacidad para reflejar de manera más precisa los gastos recurrentes relacionados a la producción, especialmente en ausencia de datos claros sobre costos fijos iniciales. Además, los costos normales son más representativos de la variabilidad en la producción y a su vez simplifcan el análisis al brindar una medida dinámica y facílmente calculable.
 
 ## Descripción general de los rendimientos de los rubros agrícolas
@@ -42,7 +43,7 @@ El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras qu
 
 ## Teoría de portafolio de Markowitz aplicada a la agricultura
 
-La Teoría Moderna de Portafolios (MPT), desarrollada por Harry Markowitz en 1952 (galardonado con el Premio Nobel de Economía en 1990), parte de la idea de que los agentes —inversores o productores— son adversos al riesgo y buscan la mejor relación entre ganancia esperada y riesgo asociado. Para ello, la MPT propone cuantificar la volatilidad de cada activo —o cultivo, en el ámbito agrícola— y examinar las correlaciones entre ellos.
+La Teoría Moderna de Portafolios (MPT), desarrollada por Harry Markowitz en 1952 (galardonado con el Premio Nobel de Economía en 1990), parte de la idea de que los agentes —inversores o productores— son aversos al riesgo y buscan la mejor relación entre ganancia esperada y riesgo asociado. Para ello, la MPT propone cuantificar la volatilidad de cada activo —o cultivo, en el contexto agrícola de la presente investigación— y examinar las correlaciones entre ellos.
 La clave radica en combinar rubros con baja correlación, de modo que el riesgo total disminuya sin sacrificar rendimientos. En el plano financiero, este conjunto de combinaciones da lugar a la “frontera eficiente”, que representa todos los portafolios que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
 
 Trasladada al sector agrícola, la metodología de Markowitz permite determinar la proporción óptima de recursos asignados a cada cultivo, equilibrando la rentabilidad potencial con la volatilidad inherente a cada rubro. Entre los portafolios que conforman la frontera eficiente, el denominado “portafolio óptimo” es aquel que maximiza el beneficio ajustado al riesgo y, por ende, equilibra de manera adecuada la rentabilidad y la volatilidad esperada. Esta herramienta resulta especialmente útil para los productores que buscan decisiones informadas y sostenibles en la asignación de sus recursos. En este punto, resulta relevante mostrar cómo se implementa este método en la práctica.  
@@ -53,8 +54,7 @@ $$
 R = \sum_{i=1}^n x_i r_i,
 $$
 
-donde $r_i$ es la rentabilidad neta por unidad de recurso asignada al cultivo $i$,  estimada a partir de la relación entre productividad, precios, costos y ciclo de cosecha. se construye un promedio ponderado de las ganancias esperadas para toda la producción.
-
+donde $r_i$ es el rendimiento estimado del cultivo $i$, estimado a partir de la relación entre la productividad promedio anual de cada cultivo, medida en kilogramos por tarea (kg/tarea), los precios promedio anuales al productor (en RD$/kg) de cada uno de los cultivos, los costos anuales de producción de los rubros agrícolas por tarea y el ciclo de cosecha de cada bien agrícola.
 
 En este contexto, se considera $V$ como la medida del riesgo de la inversión, el cual se expresa mediante la varianza de los retornos. Siguiendo la notación anterior, se define
 
@@ -65,7 +65,7 @@ $$
 
 donde $x_i$ y $x_j$ representan la proporción de recursos destinados a los cultivos $i$ y $j$, respectivamente, mientras que $\sigma_{ij}$ es la covarianza entre los retornos netos de ambos rubros. El riesgo de la inversión ($V$) refleja hasta qué punto las variaciones de un cultivo influyen en las de otro mayor. Cuando $\sigma_{ij}$ es alta, significa que ambos rubros fluctúan de manera conjunta, lo que aumenta el riesgo total si uno de ellos experimenta un descenso significativo.
 
-La **covarianza** entre dos cultivos, $\sigma_{ij}$, se determina a partir de la diferencia entre los retornos observados y sus valores esperados. Matemáticamente, puede expresarse como:
+La **covarianza** entre dos cultivos, $\sigma_{ij}$,  mide el grado en que los retornos de ambos cultivos varían conjuntamente. Matemáticamente, puede expresarse como:
 
 $$
 \sigma_{ij} = E\left[(r_i - E(r_i))(r_j - E(r_j))\right] = E(r_i r_j) - E(r_i)E(r_j),
@@ -80,35 +80,32 @@ En este enfoque, es necesario plantear los siguientes dos problemas de optimizac
 Para minimizar el riesgo de la producción, bajo el requisito de garantizar un nivel mínimo de rentabilidad, se resuelve:
 
 $$
-\text{Min}(V) = \sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \quad \text{con} \quad 
-\begin{cases}
-\sum_{i=1}^n x_i r_i \geq \theta, \\
-x_i \geq 0, \\
-\sum_{i=1}^n x_i = 1,
-\end{cases}
+\text{Min}(V) = \sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \quad \text{sujeto a:} 
 $$
 
-
-donde $\theta$ representa el retorno mínimo requerido.
+1. $\sum_{i=1}^n x_i r_i \geq \theta$,
+2. $x_i \geq 0$,
+3. $\sum_{i=1}^n x_i = 1$,
+* donde $\theta$ es el retorno neto promedio por hectárea de producción agrícola.
 
 Para maximizar la rentabilidad, bajo el supuesto de que el riesgo no supere un cierto umbral, se plantea:
 
 $$
-\text{Max}(R) = \sum_{i=1}^n x_i r_i \quad \text{con} \quad 
-\begin{cases}
-\sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \leq \gamma, \\
-x_i \geq 0, \\
-\sum_{i=1}^n x_i = 1,
-\end{cases}
+\text{Max}(R) = \sum_{i=1}^n x_i r_i \quad \text{sujeto a}:
 $$
 
-donde $\gamma$ es el nivel máximo de riesgo que el productor está dispuesto a asumir. 
+1. $\sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \leq \gamma$,  
+2. $x_i \geq 0$,  
+3. $\sum_{i=1}^n x_i = 1$.
+* donde $\gamma$ es el riesgo promedio real por hectárea de producción agrícola.
 
-Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado.
 
-# Justificación metodológica
 
-Los agricultores suelen tomar decisiones basadas en la experiencia y el análisis intuitivo de los cultivos más rentables. Este enfoque, aunque práctico en el corto plazo, presenta deficiencias estructurales. Los rendimientos pasados no garantizan resultados futuros debido a factores climáticos, enfermedades o fluctuaciones del mercado, lo que genera alta incertidumbre en su capacidad predictiva. En contraste, la MPT incorpora la varianza y la covarianza de los rendimientos históricos para estimar la rentabilidad esperada ajustada al riesgo, permitiendo decisiones más robustas frente a incertidumbres futuras. Además, mientras la selección intuitiva de cultivos maximiza beneficios en el corto plazo, ignora los beneficios de la diversificación, que reduce el riesgo total y mejora la rentabilidad ajustada en el largo plazo.
+Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado. En consecuencia, se estaría construyendo la frontera eficiente de asignaciones de recursos a los distintos rubros agrícolas.
+
+## Justificación metodológica
+
+Los agricultores suelen adoptar un enfoque empírico y hasta "heurístico" al asignar recursos a sus distintos cultivos, basándose en su experiencia y en un análisis intuitivo de los cultivos que consideran más rentables. Este enfoque, aunque práctico en el corto plazo, presenta deficiencias estructurales. Los rendimientos pasados no garantizan resultados futuros debido a factores climáticos, enfermedades o fluctuaciones del mercado, lo que genera alta incertidumbre en su capacidad predictiva. En contraste, la MPT incorpora la varianza y la covarianza de los rendimientos históricos para estimar la rentabilidad esperada ajustada al riesgo, permitiendo decisiones más robustas frente a incertidumbres futuras. Además, mientras la selección intuitiva de cultivos maximiza beneficios en el corto plazo, ignora los beneficios de la diversificación, que reduce el riesgo total y mejora la rentabilidad ajustada en el largo plazo.
 
 
 La programación lineal (PL), aunque común en la optimización de recursos agrícolas, también presenta restricciones significativas. Asume una rentabilidad fija y determinista para cada cultivo, limitando su capacidad para modelar la incertidumbre inherente a la producción agrícola. Por el contrario, la MPT optimiza en función de la rentabilidad esperada ponderada por el riesgo, considerando también las interacciones entre cultivos a través de las covarianzas. Esto permite capitalizar los efectos diversificadores de combinar cultivos con baja o negativa correlación, algo que la PL no puede modelar. Además, la MPT proporciona un marco más flexible que permite adaptaciones dinámicas a condiciones cambiantes, mientras que la PL tiende a ofrecer soluciones rígidas y poco realistas, como la asignación completa de recursos a un solo cultivo.
