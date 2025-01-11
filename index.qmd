@@ -1,10 +1,6 @@
 ---
 title: Optimización Agricola
-format:
-  typst:
-    filters:
-      - at: pre-quarto
-        path: _extensions/andrewheiss/wordcount/wordcount.lua
+format: typst
 nocite: |
   @* 
 ---
@@ -152,5 +148,7 @@ La volatilidad de los precios de los productos agrícolas puede traducirse en m�
  -->
 
 # Resultados
+
+{{< embed notebooks/opt_anual.ipynb#pie-plot >}}
 
 # Conclusiones
