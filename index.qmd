@@ -3,7 +3,105 @@ title: Optimización Agricola
 format: typst
 ---
 
-## Section
+## Planificación de un proyecto agroforestal en la República Dominicana (Cambiar el nombre de este inciso)
+
+El sector agrícola constituye uno de los sectores más importante para la República, pues en la encargada de proveer de los alimentos esenciales para los dominicanos, tanto los productores agropecuarios como otros actores son piezas claves en este proceso. Los productores dominicanos producen una enorme variedad de rubros agropecuarios lo que lo convierte en uno de los sectores más diversos.
+
+Gran parte de los poductores agrícolas en la República Dominicana, cultivan diferentes variedades de rubros agrícolas, con el objetivo de mitigar los riesgos asociados a los peligros climáticos y a su vez, garantizar la protección de su producción ante fluctuaciones del mercado. Esto puede dificultar el manejo óptimo de la producción (eleeción óptimo de los rubros, manejo de pesticidas, uso de fertilizantes etc). 
+
+Ante esta situación es crucial para los productores agrícolas saber la combinanción de rubros agrícolas que maximicen sus beneficios. Para ello se pueden incorporar diferentes métodos matemáticos.En el trabajo de Miao et al. (2023), se utilizó el modelo de portafolio para ayudar a los agricultores a distribuir eficientemente sus recursos (tierra, agua y trabajo) entre diferentes cultivos, maximizando beneficios y minimizando riesgos. Este método, inspirado en inversiones financieras, mostró que asignar más recursos a cultivos como chile y melón mejoraba las ganancias y la eficiencia, sin aumentar el riesgo. Es una herramienta útil para que los agricultores optimicen su producción de forma calculada y sostenible.
 
 Empezar aquí 
 
+<<<<<<< HEAD
+=======
+
+
+## Metodología
+
+
+Para la optimización de portafolios, es necesario conocer los rendimientos de los activos. En este caso, se emplearán como activos 12 rubros agrícolas: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano.
+
+El cálculo de los rendimientos se basa en la productividad promedio anual de cada cultivo, medida en kilogramos por tarea (kg/tarea), los precios promedio anuales al productor (en RD$/kg) de cada uno de los cultivos, los costos anuales de producción de los rubros agrícolas por tarea y el ciclo de cosecha de cada bien agrícola. Todos estos datos fueron extraídos del Ministerio de Agricultura de la República Dominicana. A continuación, se presenta la fórmula empleada para el cálculo de los rendimientos
+$$
+\frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
+$$
+El uso de los costos totales como denominador se justifica en su capacidad para reflejar de manera más precisa los gastos recurrentes relacionados a la producción, especialmente en ausencia de datos claros sobre costos fijos iniciales. Además, los costos normales son más representativos de la variabilidad en la producción y a su vez simplifcan el análisis al brindar una medida dinámica y facílmente calculable.
+
+## Descripción general de los rendimientos de los rubros agrícolas
+
+Al analizar los rendimientos anuales de los rubros agrícolas en el período 2002-2022, se observa patrones diversos en su comportamiento. Rubros como el arroz, ñame, plátano y berenjena muestran una tendencia relativamente estable, con rendimientos que se mantienen mayoritariamente entre -2% y 2%, lo cual evidencia una dinámica de producción consistente y menos expuesta a fluctuaciones externas significativas.
+Por otro lado, cultivos como el aguacate y la auyama destacan por su mayor volatilidad, con el aguacate registrando un pico notable que alcanza hasta un 12% alrededor de 2016, seguido de una caída pronunciada. La auyama, por su parte, muestra una tendencia marcadamente alcista en los últimos años, alcanzando rendimientos superiores al 10% hacia el final del período, lo que sugiere mejoras significativas en sus condiciones de producción.
+La yuca presenta un comportamiento moderadamente volátil, con fluctuaciones que se mueven entre 0% y 2%, mostrando picos ocasionales cercanos al 2% a lo largo del período. En cuanto a la papa, esta exhibe una volatilidad notable con rendimientos que oscilan entre 0% y 3%, mostrando una serie de picos y valles que reflejan la sensibilidad del cultivo a diversos factores externos.
+El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras que la batata mantiene un comportamiento relativamente estable hasta un incremento notable hacia 2020, superando el 2%. La yautía presenta un patrón particular con un pico significativo al inicio del período, seguido de una estabilización en niveles más moderados.
+
+
+
+ 
+>>>>>>> dfeeb6831d2bef1a689ceb32428ff0599c588d6e
+
+## Teoría de Markowitz aplicada a la agricultura
+
+La Teoría Moderna de Portafolios (MPT), desarrollada por Harry Markowitz en 1952 (galardonado con el Premio Nobel de Economía en 1990), parte de la idea de que los agentes —inversores o productores— son adversos al riesgo y buscan la mejor relación entre ganancia esperada y riesgo asociado. Para ello, la MPT propone cuantificar la volatilidad de cada activo —o cultivo, en el ámbito agrícola— y examinar las correlaciones entre ellos.
+La clave radica en combinar rubros con baja correlación, de modo que el riesgo total disminuya sin sacrificar rendimientos. En el plano financiero, este conjunto de combinaciones da lugar a la “frontera eficiente”, que representa todos los portafolios que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
+
+Trasladada al sector agrícola, la metodología de Markowitz permite determinar la proporción óptima de recursos asignados a cada cultivo, equilibrando la rentabilidad potencial con la volatilidad inherente a cada rubro. Entre los portafolios que conforman la frontera eficiente, el denominado “portafolio óptimo” es aquel que maximiza el beneficio ajustado al riesgo y, por ende, equilibra de manera adecuada la rentabilidad y la volatilidad esperada. Esta herramienta resulta especialmente útil para los productores que buscan decisiones informadas y sostenibles en la asignación de sus recursos. En este punto, resulta relevante mostrar cómo se implementa este método en la práctica.  
+
+La representación matemática de este enfoque se basa en dos elementos fundamentales: la rentabilidad media del conjunto de cultivos y la medición del riesgo a través de la varianza. Para el primer caso, se considera que cada cultivo $i$ recibe una fracción $x_i$ de los recursos (tierra, agua y mano de obra), de modo que $\sum_{i=1}^n x_i = 1$. Con estos valores, la rentabilidad media del “portafolio” agrícola —un promedio ponderado de las ganancias esperadas para toda la producción— se expresa como:
+
+$$
+R = \sum_{i=1}^n x_i r_i,
+$$
+
+donde $r_i$ es la rentabilidad neta por unidad de recurso asignada al cultivo $i$,  estimada a partir de la relación entre productividad, precios, costos y ciclo de cosecha. se construye un promedio ponderado de las ganancias esperadas para toda la producción.
+
+
+En este contexto, se considera $V$ como la medida del riesgo de la inversión, el cual se expresa mediante la varianza de los retornos. Siguiendo la notación anterior, se define
+
+$$
+V = \sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij},
+$$
+
+
+donde $x_i$ y $x_j$ representan la proporción de recursos destinados a los cultivos $i$ y $j$, respectivamente, mientras que $\sigma_{ij}$ es la covarianza entre los retornos netos de ambos rubros. El riesgo de la inversión ($V$) refleja hasta qué punto las variaciones de un cultivo influyen en las de otro mayor. Cuando $\sigma_{ij}$ es alta, significa que ambos rubros fluctúan de manera conjunta, lo que aumenta el riesgo total si uno de ellos experimenta un descenso significativo.
+
+La **covarianza** entre dos cultivos, $\sigma_{ij}$, se determina a partir de la diferencia entre los retornos observados y sus valores esperados. Matemáticamente, puede expresarse como:
+
+$$
+\sigma_{ij} = E\left[(r_i - E(r_i))(r_j - E(r_j))\right] = E(r_i r_j) - E(r_i)E(r_j),
+$$
+
+donde $r_i$ y $r_j$ representan el retorno neto por unidad de recurso de los cultivos $i$ y $j$, respectivamente. 
+
+Si los rendimientos de dos cultivos tienden a variar en la misma dirección, la covarianza entre ellos será positiva; por el contrario, si sus rendimientos suelen variar en direcciones opuestas, la covarianza será negativa. Una covarianza negativa facilita una diversificación más eficiente, ya que permite al productor seleccionar cultivos con rendimientos poco correlacionados, lo que reduce el riesgo total en la asignación de recursos
+
+En este enfoque, es necesario plantear los siguientes dos problemas de optimización:
+
+Para minimizar el riesgo de la producción, bajo el requisito de garantizar un nivel mínimo de rentabilidad, se resuelve:
+
+$$
+\text{Min}(V) = \sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \quad \text{con} \quad 
+\begin{cases}
+\sum_{i=1}^n x_i r_i \geq \theta, \\
+x_i \geq 0, \\
+\sum_{i=1}^n x_i = 1,
+\end{cases}
+$$
+
+
+donde $\theta$ representa el retorno mínimo requerido.
+
+Para maximizar la rentabilidad, bajo el supuesto de que el riesgo no supere un cierto umbral, se plantea:
+
+$$
+\text{Max}(R) = \sum_{i=1}^n x_i r_i \quad \text{con} \quad 
+\begin{cases}
+\sum_{i=1}^n \sum_{j=1}^n x_i x_j \sigma_{ij} \leq \gamma, \\
+x_i \geq 0, \\
+\sum_{i=1}^n x_i = 1,
+\end{cases}
+$$
+
+donde $\gamma$ es el nivel máximo de riesgo que el productor está dispuesto a asumir. 
+
+Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado.
