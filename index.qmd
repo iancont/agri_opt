@@ -40,7 +40,7 @@ El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras qu
  
 >>>>>>> dfeeb6831d2bef1a689ceb32428ff0599c588d6e
 
-## Teoría de Markowitz aplicada a la agricultura
+## Teoría de portafolio de Markowitz aplicada a la agricultura
 
 La Teoría Moderna de Portafolios (MPT), desarrollada por Harry Markowitz en 1952 (galardonado con el Premio Nobel de Economía en 1990), parte de la idea de que los agentes —inversores o productores— son adversos al riesgo y buscan la mejor relación entre ganancia esperada y riesgo asociado. Para ello, la MPT propone cuantificar la volatilidad de cada activo —o cultivo, en el ámbito agrícola— y examinar las correlaciones entre ellos.
 La clave radica en combinar rubros con baja correlación, de modo que el riesgo total disminuya sin sacrificar rendimientos. En el plano financiero, este conjunto de combinaciones da lugar a la “frontera eficiente”, que representa todos los portafolios que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
@@ -105,3 +105,14 @@ $$
 donde $\gamma$ es el nivel máximo de riesgo que el productor está dispuesto a asumir. 
 
 Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado.
+
+# Justificación metodológica
+
+Los agricultores suelen tomar decisiones basadas en la experiencia y el análisis intuitivo de los cultivos más rentables. Este enfoque, aunque práctico en el corto plazo, presenta deficiencias estructurales. Los rendimientos pasados no garantizan resultados futuros debido a factores climáticos, enfermedades o fluctuaciones del mercado, lo que genera alta incertidumbre en su capacidad predictiva. En contraste, la MPT incorpora la varianza y la covarianza de los rendimientos históricos para estimar la rentabilidad esperada ajustada al riesgo, permitiendo decisiones más robustas frente a incertidumbres futuras. Además, mientras la selección intuitiva de cultivos maximiza beneficios en el corto plazo, ignora los beneficios de la diversificación, que reduce el riesgo total y mejora la rentabilidad ajustada en el largo plazo.
+
+
+La programación lineal (PL), aunque común en la optimización de recursos agrícolas, también presenta restricciones significativas. Asume una rentabilidad fija y determinista para cada cultivo, limitando su capacidad para modelar la incertidumbre inherente a la producción agrícola. Por el contrario, la MPT optimiza en función de la rentabilidad esperada ponderada por el riesgo, considerando también las interacciones entre cultivos a través de las covarianzas. Esto permite capitalizar los efectos diversificadores de combinar cultivos con baja o negativa correlación, algo que la PL no puede modelar. Además, la MPT proporciona un marco más flexible que permite adaptaciones dinámicas a condiciones cambiantes, mientras que la PL tiende a ofrecer soluciones rígidas y poco realistas, como la asignación completa de recursos a un solo cultivo.
+
+Adoptar la MPT en la planificación agrícola implica un cambio paradigmático en cómo los agricultores asignan sus recursos. El modelo ofrece una herramienta analítica que trasciende la simple intuición y las restricciones lineales, al emplear datos históricos sobre rendimientos, precios y costos para maximizar la rentabilidad esperada ajustada por riesgo. Al identificar combinaciones de cultivos con baja correlación, la MPT reduce la volatilidad del portafolio, proporcionando estabilidad en los ingresos y permitiendo ajustes dinámicos basados en las condiciones del mercado y las variaciones climáticas.
+
+La Teoría Moderna de Portafolios ofrece una metodología superior a la programación lineal y al análisis intuitivo de los agricultores. Al considerar tanto la rentabilidad esperada como el riesgo asociado, e integrar la diversificación mediante correlaciones entre cultivos, la MPT mejora significativamente la toma de decisiones en la gestión agroforestal. 
