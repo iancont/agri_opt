@@ -33,6 +33,8 @@ El objetivo principal de esta investigación es desarrollar y validar una metodo
 
 # Metodología
 
+La presente sección desarrolla la fundamentación teórica y práctica del modelo de optimización de carteras agrícolas. Primero, presenta la adaptación de la Teoría Moderna de Portafolios de Markowitz al contexto agrícola, explicando cómo esta transformación permite optimizar la asignación de recursos entre cultivos. Posteriormente, detalla la construcción de una matriz técnica para el cálculo de rentabilidades históricas por cultivo, utilizando datos del Ministerio de Agricultura de la República Dominicana, que servirá como insumo fundamental para la estimación del modelo.
+
 ## Teoría de portafolio de Markowitz aplicada a la agricultura
 
 Como agricultor, usted enfrenta anualmente una decisión crucial: determinar qué cultivar hoy para cosechar en el próximo ciclo productivo. Esta decisión implica establecer qué proporción de su finca destinará a cada cultivo con el objetivo de maximizar sus beneficios futuros. Si bien tradicionalmente los agricultores han basado estas decisiones en su experiencia previa, preferencias personales o replicando los cultivos más rentables de temporadas anteriores, este enfoque intuitivo, aunque comprensible, presenta limitaciones significativas al no considerar sistemáticamente dos factores fundamentales: el riesgo inherente a cada cultivo y las interrelaciones entre los rendimientos de diferentes productos agrícolas.
@@ -51,9 +53,7 @@ $$
 R = \sum_{i=1}^n x_i r_i
 $$
 
-donde $R$ representa el retorno esperado total del portafolio agrícola y $r_i$ corresponde al rendimiento esperado individual del cultivo $i$. Esta fórmula nos indica que el retorno total esperado es un promedio ponderado de los rendimientos esperados de cada cultivo, donde las ponderaciones son las proporciones de recursos asignados a cada uno.
-
-El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su cálculo. Si bien existen diversos métodos para su estimación, el más utilizado es el promedio aritmético de los rendimientos históricos, asumiendo que estos siguen una distribución normal. Este rendimiento se calcula considerando cuatro componentes fundamentales:La productividad física promedio anual del cultivo, medida en kilogramos por tarea (kg/tarea); Los precios promedio anuales recibidos por el productor (expresados en RD$/kg); Los costos anuales de producción por tarea; nEl ciclo de cosecha específico de cada cultivo.
+donde $R$ representa el retorno esperado total del portafolio agrícola y $r_i$ corresponde al rendimiento esperado individual del cultivo $i$. Esta fórmula nos indica que el retorno total esperado es un promedio ponderado de los rendimientos esperados de cada cultivo, donde las pes recibidos por el productor (expresados en RD$/kg); Los costos anuales de producción por tarea; nEl ciclo de cosecha específico de cada cultivo.
 
 La asunción de normalidad en la distribución de los rendimientos históricos nos permite utilizar la media aritmética como un estimador insesgado del rendimiento esperado. Esta suposición, aunque simplificadora, ha demostrado ser suficientemente robusta para la mayoría de las aplicaciones prácticas en la planificación agrícola. Sin embargo, es importante señalar que en casos donde los rendimientos históricos muestran patrones claramente no normales, pueden ser necesarios métodos más sofisticados de estimación.
 
@@ -120,17 +120,23 @@ Adoptar la MPT en la planificación agrícola implica un cambio paradigmático e
 
 ## Matriz técnica para el calculo de la rentabilidad por rubro Agrícola. 
 
-El cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo. Todos estos datos fueron obtenidos del Ministerio de Agricultura de la República Dominicana. La fórmula utilizada es la siguiente:
+El proceso de optimizacio requiere como insumo un historico del retorno anual por cultivo para poder estimar los valores de retorno esperado y riesgo. Debido a insuficiencia de informacion, tuvimos que aproximar $r_i$ de cada cultivo utilizando una matriz tecnica. Dicha matriz, fue alimentada con datos fueron obtenidos del Ministerio de Agricultura de la República Dominicana
+
+EL cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo.. La fórmula utilizada es la siguiente:
 
 $$
 \frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
 $$ 
 
-El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Esta metodología no solo simplifica el análisis, sino que también resulta más dinámica al no depender de datos detallados sobre la inversión inicial, los cuales suelen ser difíciles de obtener en el contexto agrícola dominicano.
+El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Se utiliza costos totales como una variable proxy de lo que seria el capital inicial de inversion, bajo el supuesto que el capital de dichos costos se tiene que invertir en el tiempo de cultivo. Este supuesto se hizo por insuficiencia de dato en la inversion inicial. 
 
-La elección de los costos totales como denominador tiene varias ventajas. En primer lugar, proporciona una visión más precisa de los gastos recurrentes que los agricultores enfrentan en cada ciclo de producción. Este enfoque también captura mejor la variabilidad de los costos entre diferentes cultivos, permitiendo comparaciones más exactas entre ellos. Además, al centrarse en los costos normales, se logra un modelo más adaptable y práctico, que puede ser implementado fácilmente por los agricultores o asesores técnicos sin necesidad de un análisis financiero complejo.
+La expresión de rentabilidad en términos relativos al capital inicial representa un aspecto fundamental en el análisis de inversiones agrícolas, ya que establece una independencia escalar. Esta característica permite que el análisis mantenga su validez sin importar el tamaño de la unidad productiva. Al normalizar los rendimientos con respecto al capital invertido, los resultados son agnósticos a la extension de tierra, facilitando comparaciones significativas entre diferentes cultivos y regiones. 
 
-En términos de implicaciones, esta metodología ofrece varias ventajas significativas. Al calcular los rendimientos de manera estándar y dinámica, permite identificar cuáles cultivos presentan mayores oportunidades de rentabilidad en relación con sus costos. Esto facilita una toma de decisiones más informada y estratégica por parte de los productores agrícolas, quienes pueden ajustar su portafolio de cultivos en función de los resultados obtenidos. Además, la fórmula integra elementos claves del contexto agrícola, como el ciclo de cosecha, lo que la hace particularmente útil para evaluar la sostenibilidad de los rendimientos en el tiempo.
+El componente cíclico en la fórmula de rendimientos agrícolas cumple una función fundamental de estandarización temporal. Este multiplicador ajusta los rendimientos según la frecuencia potencial de cosecha anual, permitiendo una comparación equitativa entre cultivos de diferentes duraciones. Por ejemplo, un cultivo trimestral tendría un multiplicador de 4, reflejando su potencial de producción cuatro veces al año.Esta consideración es crucial por dos razones principales: permite comparar adecuadamente cultivos de diferentes duraciones y reconoce el valor del tiempo en términos de rotación de capital. Sin embargo, es importante notar que representa un máximo teórico, sujeto a restricciones prácticas como condiciones climáticas y recursos disponibles. 
+
+El resultado final es la rentabilidad relativa anual para cada cultivo de nuestro universo de trabajo, durante el período 2002 hasta 2023. La serie temporal resultante representa una medida estandarizada del desempeño financiero de cada cultivo, expresada como un rendimiento anualizado sobre el capital invertido. Esta métrica permite una comparación directa entre cultivos con diferentes características agronómicas.onderaciones son las proporciones de recursos asignados a cada uno.
+
+El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su cálculo. Si bien existen diversos métodos para su estimación, el más utilizado es el promedio aritmético de los rendimientos históricos, asumiendo que estos siguen una distribución normal. Este rendimiento se calcula considerando cuatro componentes fundamentales:La productividad física promedio anual del cultivo, medida en kilogramos por tarea (kg/tarea); Los precios promedio anual
 
 <!-- # Datos
 
@@ -143,100 +149,4 @@ Al analizar los rendimientos anuales de los rubros agrícolas en el período 200
 Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de la rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en cultivos de mayor costo o riesgo, forzando a muchos pequeños agricultores a optar por estrategias más conservadoras, lo cual limita su potencial de ganancias y aumenta su exposición a riesgos específicos.
 
 La volatilidad de los precios de los productos agrícolas puede traducirse en márgenes de ganancia más reducidos para los agricultores, especialmente en aquellos períodos en los que los costos de insumos, como fertilizantes o semillas, aumentan significativamente. Cuando los precios de los productos no reflejan de manera proporcional estos incrementos en los costos, los productores enfrentan una reducción en sus ingresos netos, lo que compromete la sostenibilidad de sus operaciones. Además, en ausencia de herramientas adecuadas como seguros agropecuarios, los agricultores más afectados por estas fluctuaciones pueden quedar atrapados en ciclos de endeudamiento, limitando aún más su capacidad de inversión y crecimiento.
-
-```{r}
-#| include: false
-library(tidyverse)
-library(dplyr)
-library(lmtest)
-library(vars)
-library(stats)
-library(stargazer)
-library(ggplot2)
-library(AER)
-library(readxl)
-library(tseries)
-library(mFilter)
-library(x12)
-library(svars)
-library(urca)
-library(highcharter)
-library(psych)
-library(PerformanceAnalytics)
-library(kableExtra)
-library(mFilter)
-library(reshape2)
-library(stargazer)
-```
-
-```{r}
-#| include: false
-library(readxl)
-dataset <- read_excel("dataset.xlsx", sheet = "data_anual")
-view(dataset)
-```
-
-**Tabla.** Estadísticas descriptivas de precios por rubro
-
-```{r}
-#| echo: false
-
-data_clean <- dataset %>%
-  dplyr::select(Año, Rubro, Precio_kg) 
-
-stats <- data_clean %>%
-  group_by(Rubro) %>%
-  summarise(
-    Mean = mean(Precio_kg, na.rm = TRUE),
-    Median = median(Precio_kg, na.rm = TRUE),
-    SD = sd(Precio_kg, na.rm = TRUE),
-    Min = min(Precio_kg, na.rm = TRUE),
-    Max = max(Precio_kg, na.rm = TRUE),
-    Coef_Variation = sd(Precio_kg, na.rm = TRUE) / mean(Precio_kg, na.rm = TRUE)
-  )
-
-stats %>%
-  kable(
-    format = "pipe",
-    col.names = c("Rubro", "Media", "Mediana", "Desviación Estándar", "Mínimo", "Máximo", "Coef. de Variación")
-  ) %>%
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"),
-    full_width = F
-  )
-
-```
-
-**Gráfica \#**. Evolución de los precios de los rubros agrícolas
-
-```{r}
-#| echo: false
-ggplot(data_clean, aes(x = Año, y = Precio_kg, color = Rubro, group = Rubro)) +
-  geom_line() +
-  labs(title = "Evolución de los precios por rubro", x = "Año", y = "Precio (RD$/kg)") +
-  theme_minimal() +
-  theme(legend.position = "bottom")
-```
-
-**Tabla #.** Matriz de correlación de precios por rubro
-
-```{r}
-#| echo: false
-pivoted_data <- as_tibble(data_clean %>%
-  pivot_wider(names_from = Rubro, values_from = Precio_kg))
-
-
-if ("Año" %in% colnames(pivoted_data)) {
-  pivoted_data <- pivoted_data %>% dplyr::select(-Año)
-}
-
-#La matriz de correlación
-cor_matrix <- cor(pivoted_data, use = "complete.obs")
-
-# 
-cor_matrix %>%
-  as.data.frame() %>%
-  rownames_to_column("Rubros") %>%
-  kable(format = "html", caption = "Matriz de correlación de precios por rubro") %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F)
-``` -->
+ -->
