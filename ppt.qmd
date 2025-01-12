@@ -3,5 +3,7 @@ title: Optimización Agricola
 format: clean-typst
 ---
 
+# test
 ## Section
 This is a simple placeholder for the manuscript's main document 
+
