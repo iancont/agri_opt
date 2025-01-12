@@ -3,5 +3,72 @@ title: Optimización Agricola
 format: clean-typst
 ---
 
-## Section
-This is a simple placeholder for the manuscript's main document 
+# Contenidos
+
+## Contexto del sector
+
+El sector agrícola representa una pieza clave para el desarrollo económico nacional.
+
+-   Su valor agregado representa el 3% del Producto Interno Bruto.
+
+-   Alrededor de 361,063 personas se encuentran trabajando en este sector o en sectores relacionados.
+
+-   Las exportaciones agrícolas representan el $6.4\%$ de las exportaciones totales.
+
+Sin embargo, existen ineficiencias estrucuturales y fallas del mercado que limitan su potencial de desarrollo.
+
+## Desafíos del sector
+
+El sector agrícola dominicano enfrenta serios desafíos que limitan su desarrollo y crecimiento:
+
+-   **Desigualadad estrcutural en la tenencia de la tierra**. El $77\%$ de los productores operan parcelas menores a 4.5 hectáreas, mientras que el 10% de los grandes productores: controlan el $61\%$ de la tierra agrícola.
+
+-   **Infraetrcutura rural deplorable**. Sistemas de riego inadecuado, instalaciones de almacenamiento limitada, redes de trasnporte subdesarrolada, etc.
+
+-   **Alto nivel de informalidad y bajo nivel de educación financiera**. Esto impide que dichos productores tengan acceso al financimiento.
+
+-   **Cobertura limitada a riesgos climáticos**. Los seguros agropecuarios ofrecidos solo protegen a los productores ante eventualidades climáticas pero no contemplan riesgos de mercado, fluctuaciones de precios, etc.
+
+## Riesgos del sector
+
+El sector agrícola dominicano enfrentan riesgos de caractér multidimensional, que afecta negativamente la producción y a su vez, impactan significativamente su capacidad de competir en mercados internacionales:
+
+-   **Los riesgos climáticos**. Huracanes, sequías e inundaciones.
+
+-   **Riesgos de mercados**. Volatilidad en los precios de los rubros agrícolas y la desfavorables posición que poseen los productores agrícolas con los intermediarios en la cadena de valor.
+
+-   **Exposición a riesgos biólogicos**
+
+-   **Limitado acceso a instrumentos financieros** como seguros agrícolas, contratos futuros y mecanismos de cobertura.
+
+## Próposito y objetivo del trabajo
+
+-   **Próposito**
+
+Generar una metodología alternativa y de baja inversión de capital para la planificación de cultivos, que permita mitigar los riesgos inherentes del mercado y maximizar los beneficios.
+
+-   **Objetivo**
+
+Crear un modelo matemática de optimización que permita maximizar rendimientos ajustados por riesgos a través de la selección óptima de cultivos, mejorando la sostenibilidad del sector agrícola dominicano.
+
+## Matríz técnica para el cálculo de la rentabilidad por rubro Agrícola
+
+Para el cálculo de los rendimientos, se emplea la siguiente formula:
+
+$$
+\frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
+$$
+
+-   Productividad promedio anual (kg/ha).
+
+-   Precio recibido por el productor (RD\$/kg).
+
+-   Costos totales de producción.
+
+-   Ciclo de cosecha del cultivo.
+
+## Ventajas
+
+-   Facilita la evaluación de rentabilidad sin depender del tamaño de la finca ni del capital inicial, adaptándose a diversas restricciones del mercado agrícola.
+
+-   La normalización por costos hace que la comparación sea equitativa entre cultivos con diferentes ciclos y frecuencias de cosecha, resaltando la eficiencia económica de cada rubro.
