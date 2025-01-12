@@ -49,10 +49,7 @@ colnames(stats) <- c("Rubro", "Media (%)", "Mediana (%)", "Desviación Estándar
 
 stats %>%
     mutate(across(where(is.numeric), ~ paste0(round(.x, 2), "%"))) %>%
-    gt() %>%
-    tab_header(
-        title = "Estadísticas Descriptivas por Rubro (En Porcentajes)"
-    )
+    gt()
 ```
 
 # Costos anuales por Rubro
@@ -60,7 +57,7 @@ stats %>%
 #| warning: false
 #| label: cost-by-crop
 #| fig-cap: "Histórico de costos anuales por rubro"
-ds %>%
+cost_plot <- ds %>%
     ggplot(aes(x = ano, y = costos_en_rd, color = rubro, group = rubro)) +
     geom_line(linewidth = 1) +
     geom_point(size = 1) +
@@ -86,6 +83,8 @@ ds %>%
         strip.text = element_text(size = 14, face = "bold")
     ) +
     facet_wrap(~rubro, scales = "free_y", ncol = 3)
+
+ggsave(here::here("notebooks/eda/costs_by_crop.png"), cost_plot, width = 12, height = 8, dpi = 300)
 ```
 
 
@@ -95,7 +94,7 @@ ds %>%
 #| warning: false
 #| label: price-by-crop
 #| fig-cap: "Histórico de precios por rubro agrícola"
-ds %>%
+price_plot <- ds %>%
     ggplot(aes(x = ano, y = precio_kg, color = rubro, group = rubro)) +
     geom_line(linewidth = 1) +
     geom_point(size = 1) +
@@ -121,6 +120,7 @@ ds %>%
         strip.text = element_text(size = 14, face = "bold")
     ) +
     facet_wrap(~rubro, scales = "free_y", ncol = 3)
+ggsave(here::here("notebooks/eda/prices_by_crop.png"), price_plot, width = 12, height = 8, dpi = 300)
 ```
 
 # Rentabilidad anual por Rubro
@@ -128,7 +128,7 @@ ds %>%
 #| warning: false
 #| label: fig-
 #| fig-cap: "Rentabilidad anual por rubro agrícola"
-ds %>%
+profit_plot <- ds %>%
     ggplot(aes(x = ano, y = rentabilidad_anual * 100, group = rubro, color = rubro)) +
     geom_line(linewidth = 1) +
     geom_point(size = 1) +
@@ -150,4 +150,5 @@ ds %>%
         strip.text = element_text(size = 14, face = "bold")
     ) +
     facet_wrap(~rubro, scales = "free_y", ncol = 3)
+ggsave(here::here("notebooks/eda/profitability_by_crop.png"), profit_plot, width = 12, height = 8, dpi = 300)
 ```

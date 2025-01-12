@@ -418,7 +418,7 @@ Donde:
 
 + $A w lt.eq B$: representa un conjunto de restricciones lineales.
 
-+ $phi.alt_i (w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discución.
++ $phi.alt_i (w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discusión.
 
 Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado. En consecuencia, se estaría construyendo la "frontera eficiente", que representa todas de asignaciones de recursos a los distintos rubros agrícolas que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
 
@@ -434,7 +434,7 @@ Adoptar la MPT en la planificación agrícola implica un cambio paradigmático e
 <matriz-técnica-para-el-calculo-de-la-rentabilidad-por-rubro-agrícola.>
 El proceso de optimización requiere como insumo un histórico del retorno anual por cultivo para poder estimar los valores de retorno esperado y riesgo. Debido a la insuficiencia de información, tuvimos que aproximar $r_i$ de cada cultivo utilizando una matriz técnica. Dicha matriz fue alimentada con datos que fueron obtenidos del Ministerio de Agricultura de la República Dominicana.
 
-EL cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo.. La fórmula utilizada es la siguiente:
+EL cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo. La fórmula utilizada es la siguiente:
 
 $ frac(upright("Productividad") dot.op upright("Precio") - upright("costo"), upright("costo")) dot.op (upright("ciclo")) $
 
@@ -442,28 +442,76 @@ El numerador de la fórmula, que considera la diferencia entre la productividad 
 
 La expresión de rentabilidad en términos relativos al capital inicial representa un aspecto fundamental en el análisis de inversiones agrícolas, ya que establece una independencia escalar. Esta característica permite que el análisis mantenga su validez sin importar el tamaño de la unidad productiva. Al normalizar los rendimientos con respecto al capital invertido, los resultados son agnósticos a la extension de tierra, facilitando comparaciones significativas entre diferentes cultivos y regiones.
 
-El componente cíclico en la fórmula de rendimientos agrícolas cumple una función fundamental de estandarización temporal. Este multiplicador ajusta los rendimientos según la frecuencia potencial de cosecha anual, permitiendo una comparación equitativa entre cultivos de diferentes duraciones. Por ejemplo, un cultivo trimestral tendría un multiplicador de 4, reflejando su potencial de producción cuatro veces al año.Esta consideración es crucial por dos razones principales: permite comparar adecuadamente cultivos de diferentes duraciones y reconoce el valor del tiempo en términos de rotación de capital. Sin embargo, es importante notar que representa un máximo teórico, sujeto a restricciones prácticas como condiciones climáticas y recursos disponibles.
+El componente cíclico en la fórmula de rendimientos agrícolas cumple una función fundamental de estandarización temporal. Este multiplicador ajusta los rendimientos según la frecuencia potencial de cosecha anual, permitiendo una comparación equitativa entre cultivos de diferentes duraciones. Por ejemplo, un cultivo trimestral tendría un multiplicador de 4, reflejando su potencial de producción cuatro veces al año. Esta consideración es crucial por dos razones principales: permite comparar adecuadamente cultivos de diferentes duraciones y reconoce el valor del tiempo en términos de rotación de capital. Sin embargo, es importante notar que representa un máximo teórico, sujeto a restricciones prácticas como condiciones climáticas y recursos disponibles.
 
 El resultado final es la rentabilidad relativa anual para cada cultivo de nuestro universo de trabajo, durante el período 2002 hasta 2023. La serie temporal resultante representa una medida estandarizada del desempeño financiero de cada cultivo, expresada como un rendimiento anualizado sobre el capital invertido. Esta métrica permite una comparación directa entre cultivos con diferentes características agronómicas.
 
-El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su cálculo. Si bien existen diversos métodos para su estimación, el más utilizado es el promedio aritmético de los rendimientos históricos, asumiendo que estos siguen una distribución normal. Este rendimiento se calcula considerando cuatro componentes fundamentales:La productividad física promedio anual del cultivo, medida en kilogramos por tarea (kg/tarea); Los precios promedio anual
+El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su cálculo. Si bien existen diversos métodos para su estimación, el más utilizado es el promedio aritmético de los rendimientos históricos, asumiendo que estos siguen una distribución normal. Este rendimiento se calcula considerando cuatro componentes fundamentales: La productividad física promedio anual del cultivo, medida en kilogramos por tarea (kg/tarea); Los precios promedio anual
 
 = Datos
 <datos>
+La optimización de portafolios en esta investigación se basa en el cálculo de rendimientos agrícolas, tomando como activos 12 cultivos clave: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano. La elección de estos cultivos responde a dos factores principales. En primer lugar, se seleccionaron debido a su alta disponibilidad, facilitando así el análisis de rendimientos y costos de producción. En segundo lugar, estos rubros tienen una gran relevancia en la dieta dominicana, lo que asegura que los resultados del modelo sean representativos y aplicables para los agricultores que buscan maximizar su rentabilidad en contextos locales.
+
+== Análisis de la estadística descriptiva
+<análisis-de-la-estadística-descriptiva>
 #block[
+#table(
+  columns: 6,
+  align: (left,auto,auto,auto,auto,auto,),
+  table.header([Estadísticas Descriptivas por Rubro (En Porcentajes)], [], [], [], [], [],),
+  table.hline(),
+  [Rubro], [Media (%)], [Mediana (%)], [Desviación Estándar (%)], [Mínimo (%)], [Máximo (%)],
+  [Auyama], [559.67%], [523.76%], [318.73%], [0%], [1186.51%],
+  [Aguacate], [159.58%], [59.83%], [354.78%], [-195.12%], [1187.04%],
+  [Papa], [142.92%], [157.05%], [118.92%], [-98.91%], [331.95%],
+  [Yautía], [112.41%], [77.95%], [114.34%], [0%], [556.21%],
+  [Yuca], [50.64%], [34.77%], [65.06%], [-43.96%], [185.35%],
+  [Ñame], [35.65%], [36.93%], [25.58%], [-17.55%], [73.19%],
+  [Batata], [29.94%], [13.94%], [70.77%], [-72.18%], [255.74%],
+  [Plátano], [-6.55%], [0%], [28.36%], [-69.69%], [30.17%],
+  [Guineo], [-23.27%], [-35.76%], [28.41%], [-59.39%], [32.57%],
+  [Maíz], [-78.6%], [-82.19%], [51.97%], [-172.5%], [0%],
+  [Berenjena], [-80.4%], [-78.52%], [49.94%], [-166.3%], [0%],
+  [Arroz], [-108.25%], [-122.29%], [45.57%], [-158.82%], [0%],
+)
+Estadísticas descriptivas de la rentabilidad por rubro
+
+]
+El análisis de las estadísticas descriptivas del sector agrícola dominicano revela importantes patrones en la rentabilidad y volatilidad de diversos cultivos, identificando tres grupos principales según su desempeño financiero. Los cultivos de alta rentabilidad como la auyama y el aguacate muestran retornos sobresalientes de 559.67% y 159.58% respectivamente, aunque acompañados de una elevada volatilidad con desviaciones estándar de 318.73% y 354.78%. En contraste, cultivos tradicionales como la papa, la yautía y la yuca presentan un perfil más moderado, con rentabilidades de 142.92%, 112.41% y 50.64% respectivamente, mostrando mayor estabilidad en sus retornos.
+
+El tercer grupo incluye cultivos que registran pérdidas consistentes, como el arroz, el maíz y la berenjena, con rentabilidades negativas de -108.25%, -78.6% y -80.4%, mientras que el ñame y la batata mantienen rentabilidades modestas pero positivas de 35.65% y 29.94%. Estos resultados, aunque sujetos a posibles limitaciones en la calidad de los datos, proporcionan una base sólida para comprender la dinámica económica del sector agrícola dominicano y sus distintos niveles de rendimiento financiero.
+
+== Análisis exploratorio de los rendimientos de los rubros agrícolas
+<análisis-exploratorio-de-los-rendimientos-de-los-rubros-agrícolas>
+El análisis de la evolución de la rentabilidad de los rubros agrícolas, más allá de evaluar las ganancias potenciales, nos permite comprender de manera implícita los riesgos asociados a los costos, precios y mercados. Esto es esencial para identificar las dinámicas económicas subyacentes que afectan la sostenibilidad de cada cultivo. Por ejemplo, en rubros como el aguacate y la auyama, su alta rentabilidad evidencia oportunidades económicas, pero al mismo tiempo resalta riesgos de mercado asociados a la volatilidad de los precios internacionales y a los costos de exportación (@fig-costs_by_crop). Esto indica que, aunque hay grandes posibilidades de ingresos, los productores están expuestos a fluctuaciones que pueden reducir drásticamente sus márgenes en años desfavorables.
+
+Por otro lado, cultivos como el arroz, que mantienen rentabilidades negativas, reflejan riesgos estructurales importantes. Estos riesgos no solo están relacionados con la competitividad del mercado, sino también con los costos de producción y los insumos, que en este caso parecen superar consistentemente los ingresos generados (@fig-price_by_crop). Este desequilibrio muestra cómo los riesgos financieros y de insumo impactan directamente en la rentabilidad.
+
+Rubros con rentabilidades más estables, como la papa y la yautía, indican una menor exposición a riesgos de mercado, probablemente debido a su demanda constante en el consumo local. Sin embargo, los costos crecientes, como se observa en las gráficas (@fig-profit_by_crop), representan un riesgo financiero latente que podría afectar negativamente su rentabilidad a largo plazo si no se mejoran los procesos productivos.
+
+En cultivos como el maíz y la berenjena, la alta volatilidad de la rentabilidad pone en evidencia riesgos combinados tanto del mercado (por fluctuaciones en la demanda o precios) como de insumos, dado que estos cultivos son más sensibles a factores climáticos y requieren inversiones variables en fertilizantes y mano de obra. Esto refuerza la idea de que la rentabilidad, al ser un indicador multifacético, es clave para captar la interacción entre los riesgos de insumos, financieros y de mercado.
+
+Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de la rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en potencial de ganancias y aumenta su exposición a riesgos específicos.
+
+La volatilidad de los precios de los productos agrícolas puede traducirse en márgenes de ganancia más reducidos para los agricultores, especialmente en aquellos períodos en los que los costos de insumos, como fertilizantes o semillas, aumentan significativamente. Cuando los precios de los productos no reflejan de manera proporcional estos incrementos en los costos, los productores enfrentan una reducción en sus ingresos netos, lo que compromete la sostenibilidad de sus operaciones. Además, en ausencia de herramientas adecuadas como seguros agropecuarios, los agricultores más afectados por estas fluctuaciones pueden quedar atrapados en ciclos de endeudamiento, limitando aún más su capacidad de inversión y crecimiento.
+
+== Análisis de la matriz de correlación de la rentabilidad de los rubros
+<análisis-de-la-matriz-de-correlación-de-la-rentabilidad-de-los-rubros>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-cluster-output-1.png"))
+#box(image("notebooks/opt/cluster.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
-Agrupación de los rubros agrícolas
+Agrupamiento jerárquico de los cultivos por similitud de riesgo
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-cluster>
 
 
-]
+La matriz de correlación @fig-cluster entre rentabilidades agrícolas revela patrones significativos para la gestión de riesgos en el sector. La fuerte correlación positiva entre cultivos como el guineo y el plátano indica que estos productos tienden a comportarse de manera similar ante cambios en el mercado y condiciones climáticas, limitando su efectividad para la diversificación de riesgos. En contraste, cultivos como el arroz y la berenjena, que muestran correlaciones bajas o negativas con otros rubros, representan oportunidades valiosas para la diversificación del portafolio agrícola, permitiendo mitigar el impacto de fluctuaciones adversas en el mercado. Esta distinción entre cultivos altamente correlacionados y aquellos con baja correlación proporciona una base fundamental para desarrollar estrategias de producción más resilientes, especialmente cuando se combina la producción de cultivos complementarios que responden de manera diferente a las condiciones del mercado y factores climáticos.
+
 = Resultados
 <resultados>
 La siguiente sección presenta la estimación de ponderaciones óptimas se realizó para determinar la composición del portafolio agrícola correspondiente al primer trimestre de 2023. El análisis se fundamenta en datos históricos del período 2002-2022, a partir de los cuales se estimaron los retornos medios y la varianza de la canasta de cultivos seleccionados. Se estableció una tasa libre de riesgo del 8%, calculada como la media redondeada de la tasa de los instrumentos a un año del Banco Central durante el período de estudio. Las ponderaciones resultantes representan la distribución óptima de cultivos a implementar en 2023.
@@ -595,6 +643,74 @@ La selección de la medida de riesgo más apropiada debe alinearse con las prác
 <conclusiones>
 = Anexos
 <anexos>
+#block[
+#table(
+  columns: 13,
+  align: (auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,),
+  table.header([~], [Aguacate], [Arroz], [Auyama], [Batata], [Berenjena], [Guineo], [Maíz], [Papa], [Plátano], [Yautía], [Yuca], [Ñame],),
+  table.hline(),
+  [weights], [0.06%], [0.00%], [0.34%], [0.00%], [0.00%], [0.28%], [0.00%], [0.02%], [0.00%], [0.29%], [0.00%], [0.00%],
+)
+]
+#block[
+#table(
+  columns: 14,
+  align: (auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,),
+  table.header([~], [MV], [MAD], [MSV], [FLPM], [SLPM], [CVaR], [EVaR], [WR], [MDD], [ADD], [CDaR], [UCI], [EDaR],),
+  table.hline(),
+  [Aguacate], table.cell(fill: rgb("#ebf7b0"))[#set text(fill: rgb("#000000")); 6.10%], table.cell(fill: rgb("#fdfeda"))[#set text(fill: rgb("#000000")); 2.01%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 2.14%], table.cell(fill: rgb("#ebf7b0"))[#set text(fill: rgb("#000000")); 7.04%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 5.57%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 4.34%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 5.93%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 5.22%], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 4.58%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 3.32%],
+  [Arroz], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 1.46%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 1.24%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe4"))[#set text(fill: rgb("#000000")); 2.54%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 1.64%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.31%], table.cell(fill: rgb("#ffffe4"))[#set text(fill: rgb("#000000")); 2.60%], table.cell(fill: rgb("#feffe1"))[#set text(fill: rgb("#000000")); 2.83%],
+  [Auyama], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.25%], table.cell(fill: rgb("#e0f3a8"))[#set text(fill: rgb("#000000")); 13.56%], table.cell(fill: rgb("#6bc072"))[#set text(fill: rgb("#000000")); 26.92%], table.cell(fill: rgb("#208242"))[#set text(fill: rgb("#f1f1f1")); 27.86%], table.cell(fill: rgb("#8bce81"))[#set text(fill: rgb("#000000")); 18.70%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#b2df90"))[#set text(fill: rgb("#000000")); 15.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.39%], table.cell(fill: rgb("#4cb063"))[#set text(fill: rgb("#f1f1f1")); 21.47%], table.cell(fill: rgb("#9fd788"))[#set text(fill: rgb("#000000")); 16.32%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 43.12%],
+  [Batata], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f4fbb7"))[#set text(fill: rgb("#000000")); 5.54%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 5.13%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 5.00%], table.cell(fill: rgb("#f2fab5"))[#set text(fill: rgb("#000000")); 6.49%], table.cell(fill: rgb("#f9fdc2"))[#set text(fill: rgb("#000000")); 5.42%], table.cell(fill: rgb("#fafdc8"))[#set text(fill: rgb("#000000")); 5.26%], table.cell(fill: rgb("#fcfed4"))[#set text(fill: rgb("#000000")); 4.26%],
+  [Berenjena], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fcfed3"))[#set text(fill: rgb("#000000")); 2.54%], table.cell(fill: rgb("#fbfed0"))[#set text(fill: rgb("#000000")); 2.76%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 3.28%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 2.38%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 3.08%], table.cell(fill: rgb("#fdfedb"))[#set text(fill: rgb("#000000")); 3.30%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 3.97%],
+  [Guineo], table.cell(fill: rgb("#0c723b"))[#set text(fill: rgb("#f1f1f1")); 28.41%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 61.78%], table.cell(fill: rgb("#a2d88a"))[#set text(fill: rgb("#000000")); 20.22%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.61%], table.cell(fill: rgb("#fafdcb"))[#set text(fill: rgb("#000000")); 3.42%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f8fcbe"))[#set text(fill: rgb("#000000")); 6.34%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 4.79%], table.cell(fill: rgb("#f8fcc0"))[#set text(fill: rgb("#000000")); 5.62%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 6.27%], table.cell(fill: rgb("#fafdcb"))[#set text(fill: rgb("#000000")); 5.40%],
+  [Maíz], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 1.44%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.34%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.31%], table.cell(fill: rgb("#feffe2"))[#set text(fill: rgb("#000000")); 1.92%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.23%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.34%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.24%],
+  [Papa], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 2.27%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 1.52%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 3.94%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 4.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 3.79%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 3.96%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 3.98%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 3.71%], table.cell(fill: rgb("#fdfedb"))[#set text(fill: rgb("#000000")); 3.50%],
+  [Plátano], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.73%], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 2.89%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.88%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 3.56%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.35%], table.cell(fill: rgb("#fafdc9"))[#set text(fill: rgb("#000000")); 5.06%], table.cell(fill: rgb("#fcfed4"))[#set text(fill: rgb("#000000")); 4.31%],
+  [Yautía], table.cell(fill: rgb("#086e3a"))[#set text(fill: rgb("#f1f1f1")); 28.96%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.19%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 50.72%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 36.51%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 40.64%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 38.87%], table.cell(fill: rgb("#288a47"))[#set text(fill: rgb("#f1f1f1")); 25.46%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.24%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 36.67%], table.cell(fill: rgb("#c7e89a"))[#set text(fill: rgb("#000000")); 14.67%],
+  [Yuca], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#eff9b3"))[#set text(fill: rgb("#000000")); 6.23%], table.cell(fill: rgb("#edf8b2"))[#set text(fill: rgb("#000000")); 7.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f8fdc1"))[#set text(fill: rgb("#000000")); 6.13%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 5.47%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 6.05%], table.cell(fill: rgb("#f7fcba"))[#set text(fill: rgb("#000000")); 6.55%], table.cell(fill: rgb("#fafdc8"))[#set text(fill: rgb("#000000")); 5.61%],
+  [Ñame], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#d0ec9f"))[#set text(fill: rgb("#000000")); 16.94%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f0f9b4"))[#set text(fill: rgb("#000000")); 6.10%], table.cell(fill: rgb("#e6f5ac"))[#set text(fill: rgb("#000000")); 8.32%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 7.03%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 4.02%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 6.04%], table.cell(fill: rgb("#f2fab5"))[#set text(fill: rgb("#000000")); 7.32%], table.cell(fill: rgb("#f8fcbe"))[#set text(fill: rgb("#000000")); 6.77%],
+)
+]
+#figure([
+#box(image("notebooks/eda/costs_by_crop.png"))
+], caption: figure.caption(
+position: bottom, 
+[
+Evolución de los Costos de Producción por Rubros Agrícolas, 2002-2022
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figura", 
+)
+<fig-costs_by_crop>
+
+
+#figure([
+#box(image("notebooks/eda/prices_by_crop.png"))
+], caption: figure.caption(
+position: bottom, 
+[
+Evolución de los Precios de Venta por Rubros Agrícolas, 2002-2022
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figura", 
+)
+<fig-price_by_crop>
+
+
+#figure([
+#box(image("notebooks/eda/profitability_by_crop.png"))
+], caption: figure.caption(
+position: bottom, 
+[
+Evolución de las Rentabilidades por Rubros Agrícolas, 2002-2022
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figura", 
+)
+<fig-profit_by_crop>
+
+
 
 
 
