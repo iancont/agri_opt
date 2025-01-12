@@ -43,9 +43,9 @@ En el ámbito de los mercados financieros, los inversores enfrentaron histórica
 
 Esta teoría puede adaptarse elegantemente al contexto agrícola considerando cada cultivo como un "activo" dentro del "portafolio agrícola" que representa nuestra finca. Así, la decisión sobre qué proporción de tierra destinar a cada cultivo se transforma en un problema de optimización matemática donde buscamos maximizar los beneficios esperados para el próximo ciclo productivo. En este problema, nuestras variables de control son las proporciones de tierra a destinar a cada cultivo, decisión que debe tomarse considerando dos restricciones fundamentales: la capacidad limitada de nuestra finca (medida en tareas) y el riesgo inherente a cada combinación de cultivos. Esta última restricción es particularmente relevante dado que, como agricultores, enfrentamos múltiples fuentes de incertidumbre: riesgos biológicos, climáticos, de mercado, financieros y de disponibilidad de insumos.
 
-La formalización matemática de este proceso de decisión, que se toma al inicio del período t y se mantiene hasta su finalización, considera tres elementos fundamentales: la rentabilidad media esperada del conjunto de cultivos, la cuantificación del riesgo mediante la varianza de la rentabilidad, y la optimización de la función objetivo sujeta a nuestras restricciones de capacidad y riesgo. Este enfoque nos permite transformar la intuición y experiencia del agricultor en un marco analítico riguroso para la toma de decisiones. 
+La formalización matemática de este proceso de decisión, que se toma al inicio del período t y se mantiene hasta su finalización, considera tres elementos fundamentales: la rentabilidad media esperada del conjunto de cultivos, la cuantificación del riesgo mediante la varianza de la rentabilidad, y la optimización de la función objetivo sujeta a nuestras restricciones de capacidad y riesgo. Este enfoque nos permite transformar la intuición y experiencia del agricultor en un marco analítico riguroso para la toma de decisiones.
 
-Formalmente, consideramos que cada cultivo $i$ recibe una fracción $x_i$ de los recursos disponibles, principalmente tierra, agua y mano de obra. Una restricción fundamental es que la suma de estas fracciones debe ser igual a uno, es decir, $\sum_{i=1}^n x_i = 1$, lo que garantiza la utilización completa de las tareas de nuestra finca. 
+Formalmente, consideramos que cada cultivo $i$ recibe una fracción $x_i$ de los recursos disponibles, principalmente tierra, agua y mano de obra. Una restricción fundamental es que la suma de estas fracciones debe ser igual a uno, es decir, $\sum_{i=1}^n x_i = 1$, lo que garantiza la utilización completa de las tareas de nuestra finca.
 
 Bajo estas condiciones, la rentabilidad esperada del portafolio agrícola se fundamenta en la la suma de los rendimientos esperados de los cultivos multiplicados por el peso relativo que tienen en la plantación la rentabilidad esperada del portafolio agrícola se expresa matemáticamente como:
 
@@ -53,7 +53,7 @@ $$
 R = \sum_{i=1}^n x_i r_i
 $$
 
-donde $R$ representa el retorno esperado total del portafolio agrícola y $r_i$ corresponde al rendimiento esperado individual del cultivo $i$. Esta fórmula nos indica que el retorno total esperado es un promedio ponderado de los rendimientos esperados de cada cultivo, donde las pes recibidos por el productor (expresados en RD$/kg); Los costos anuales de producción por tarea; nEl ciclo de cosecha específico de cada cultivo.
+donde $R$ representa el retorno esperado total del portafolio agrícola y $r_i$ corresponde al rendimiento esperado individual del cultivo $i$. Esta fórmula nos indica que el retorno total esperado es un promedio ponderado de los rendimientos esperados de cada cultivo, donde las pes recibidos por el productor (expresados en RD\$/kg); Los costos anuales de producción por tarea; nEl ciclo de cosecha específico de cada cultivo.
 
 La asunción de normalidad en la distribución de los rendimientos históricos nos permite utilizar la media aritmética como un estimador insesgado del rendimiento esperado. Esta suposición, aunque simplificadora, ha demostrado ser suficientemente robusta para la mayoría de las aplicaciones prácticas en la planificación agrícola. Sin embargo, es importante señalar que en casos donde los rendimientos históricos muestran patrones claramente no normales, pueden ser necesarios métodos más sofisticados de estimación.
 
@@ -81,7 +81,7 @@ Este principio fundamenta la estrategia de diversificación en agricultura. Al s
 
 La varianza total del portafolio ($\phi_{k}(w)$) integra todas estas covarianzas, ponderadas por las proporciones de recursos asignados a cada cultivo. Así, el riesgo total no es simplemente la suma de los riesgos individuales de cada cultivo, sino que depende crucialmente de cómo estos cultivos se relacionan entre sí. Este entendimiento nos permite diseñar estrategias de producción que no solo maximizan el retorno esperado sino que también minimizan nuestra exposición a riesgos sistemáticos en la agricultura.
 
-La metodología planteada por Markowitz, al combinar los conceptos de la varianza total del portafolio ($V$) y la rentabilidad esperada($R$),  permite determinar la proporción óptima de recursos(tareas) asignados a cada cultivo. Este lo logra al introducir el concepto del Sharpe Ratio. Expresándose matemáticamente como $(R(w) - r_f)/\phi_{k}(w)$, $r_f$ representa el costo de oportunidad de la tierra (como el ingreso por arrendamiento). Este ratio nos proporciona una medida crucial: cuánto retorno adicional obtenemos por cada unidad de riesgo asumido en nuestra selección de cultivos.Para ilustrar la intuición detrás de la métrica, consideremos el siguiente ejemplo: Aunque un cultivo pueda ofrecer una rentabilidad 1% superior en términos absolutos, si este conlleva un riesgo significativo de pérdida total de la inversión, mientras que la alternativa presenta un riesgo mínimo, la decisión óptima se vuelve evidente. La clave no radica simplemente en el potencial de ganancia, sino en la relación entre el retorno esperado y el riesgo de pérdida asociado. Es este coeficiente de retorno/riesgo, el cual es el objetivo de optimización de nuestra metodología, equilibrando la rentabilidad potencial con la volatilidad inherente a cada rubro.  Por lo tanto, el problema de optimización se puede plantear como: 
+La metodología planteada por Markowitz, al combinar los conceptos de la varianza total del portafolio ($V$) y la rentabilidad esperada($R$), permite determinar la proporción óptima de recursos(tareas) asignados a cada cultivo. Este lo logra al introducir el concepto del Sharpe Ratio. Expresándose matemáticamente como $(R(w) - r_f)/\phi_{k}(w)$, $r_f$ representa el costo de oportunidad de la tierra (como el ingreso por arrendamiento). Este ratio nos proporciona una medida crucial: cuánto retorno adicional obtenemos por cada unidad de riesgo asumido en nuestra selección de cultivos.Para ilustrar la intuición detrás de la métrica, consideremos el siguiente ejemplo: Aunque un cultivo pueda ofrecer una rentabilidad 1% superior en términos absolutos, si este conlleva un riesgo significativo de pérdida total de la inversión, mientras que la alternativa presenta un riesgo mínimo, la decisión óptima se vuelve evidente. La clave no radica simplemente en el potencial de ganancia, sino en la relación entre el retorno esperado y el riesgo de pérdida asociado. Es este coeficiente de retorno/riesgo, el cual es el objetivo de optimización de nuestra metodología, equilibrando la rentabilidad potencial con la volatilidad inherente a cada rubro. Por lo tanto, el problema de optimización se puede plantear como:
 
 $$
 \begin{aligned}
@@ -94,23 +94,23 @@ $$
 
 Donde:
 
-1. $R(w)$ es la función de retorno, con los siguientes valores posibles:$\mu w$: retorno aritmético.
+1.  $R(w)$ es la función de retorno, con los siguientes valores posibles:$\mu w$: retorno aritmético.
 
-2. $w$: es el vector de pesos del portafolio óptimo.
+2.  $w$: es el vector de pesos del portafolio óptimo.
 
-3. $\mu$: es el vector de retornos esperados.
+3.  $\mu$: es el vector de retornos esperados.
 
-4. $\Sigma$: es la matriz de covarianza de los retornos de los activos.
+4.  $\Sigma$: es la matriz de covarianza de los retornos de los activos.
 
-5. $r$: es la matriz de retornos de los activos.
+5.  $r$: es la matriz de retornos de los activos.
 
-6. $Aw \leq B$: representa un conjunto de restricciones lineales.
+6.  $Aw \leq B$: representa un conjunto de restricciones lineales.
 
-7. $\phi_i(w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discusión. 
+7.  $\phi_i(w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discusión.
 
 Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado. En consecuencia, se estaría construyendo la "frontera eficiente", que representa todas de asignaciones de recursos a los distintos rubros agrícolas que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
 
-Entre los portafolios que conforman la frontera eficiente, el denominado “portafolio óptimo” es aquel que maximiza el beneficio ajustado al riesgo y, por ende, equilibra de manera adecuada la rentabilidad y la volatilidad esperada. Esta herramienta resulta especialmente útil para los productores que buscan decisiones informadas y sostenibles en la asignación de sus recursos. En este punto, resulta relevante mostrar cómo se implementa este método en la práctica.  
+Entre los portafolios que conforman la frontera eficiente, el denominado "portafolio óptimo" es aquel que maximiza el beneficio ajustado al riesgo y, por ende, equilibra de manera adecuada la rentabilidad y la volatilidad esperada. Esta herramienta resulta especialmente útil para los productores que buscan decisiones informadas y sostenibles en la asignación de sus recursos. En este punto, resulta relevante mostrar cómo se implementa este método en la práctica.
 
 Los agricultores suelen adoptar un enfoque empírico al asignar recursos a sus distintos cultivos, basándose en su experiencia y en un análisis intuitivo de los cultivos que consideran más rentables. Esta heurística, aunque práctica en el corto plazo, presenta deficiencias estructurales. Para empezar, los rendimientos pasados no garantizan resultados futuros debido a factores climáticos, enfermedades o fluctuaciones del mercado, lo que genera alta incertidumbre en su capacidad predictiva. En contraste, la MPT incorpora la varianza y la covarianza de los rendimientos históricos para estimar la rentabilidad esperada ajustada al riesgo, permitiendo decisiones más robustas frente a incertidumbres futuras. Además, mientras la selección intuitiva de cultivos maximiza beneficios en el corto plazo, ignora los beneficios de la diversificación, que reduce el riesgo total y mejora la rentabilidad ajustada en el largo plazo.
 
@@ -118,7 +118,7 @@ La programación lineal (PL), aunque común en la optimización de recursos agr�
 
 Adoptar la MPT en la planificación agrícola implica un cambio paradigmático en cómo los agricultores asignan sus recursos. El modelo ofrece una herramienta analítica que trasciende la simple intuición y las restricciones lineales, al emplear datos históricos sobre rendimientos, precios y costos para maximizar la rentabilidad esperada ajustada por riesgo. Al identificar combinaciones de cultivos con baja correlación, la MPT reduce la volatilidad del portafolio, proporcionando estabilidad en los ingresos y permitiendo ajustes dinámicos basados en las condiciones del mercado y las variaciones climáticas.
 
-## Matriz técnica para el calculo de la rentabilidad por rubro Agrícola. 
+## Matriz técnica para el calculo de la rentabilidad por rubro Agrícola.
 
 El proceso de optimización requiere como insumo un histórico del retorno anual por cultivo para poder estimar los valores de retorno esperado y riesgo. Debido a la insuficiencia de información, tuvimos que aproximar $r_i$ de cada cultivo utilizando una matriz técnica. Dicha matriz fue alimentada con datos que fueron obtenidos del Ministerio de Agricultura de la República Dominicana.
 
@@ -126,13 +126,13 @@ EL cálculo de los rendimientos agrícolas se realiza mediante una fórmula que 
 
 $$
 \frac{\text{Productividad} \cdot \text{Precio} - \text{costo}}{\text{costo}} \cdot (\text{ciclo})
-$$ 
+$$
 
-El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Se utiliza costos totales como una variable proxy de lo que seria el capital inicial de inversion, bajo el supuesto que el capital de dichos costos se tiene que invertir en el tiempo de cultivo. Este supuesto se hizo por insuficiencia de dato en la inversion inicial. 
+El numerador de la fórmula, que considera la diferencia entre la productividad multiplicada por el precio y los costos de producción, representa los beneficios netos generados por cada cultivo en un período específico. El denominador, que utiliza los costos totales, permite obtener una medida estandarizada de rendimiento relativo. Se utiliza costos totales como una variable proxy de lo que seria el capital inicial de inversion, bajo el supuesto que el capital de dichos costos se tiene que invertir en el tiempo de cultivo. Este supuesto se hizo por insuficiencia de dato en la inversion inicial.
 
-La expresión de rentabilidad en términos relativos al capital inicial representa un aspecto fundamental en el análisis de inversiones agrícolas, ya que establece una independencia escalar. Esta característica permite que el análisis mantenga su validez sin importar el tamaño de la unidad productiva. Al normalizar los rendimientos con respecto al capital invertido, los resultados son agnósticos a la extension de tierra, facilitando comparaciones significativas entre diferentes cultivos y regiones. 
+La expresión de rentabilidad en términos relativos al capital inicial representa un aspecto fundamental en el análisis de inversiones agrícolas, ya que establece una independencia escalar. Esta característica permite que el análisis mantenga su validez sin importar el tamaño de la unidad productiva. Al normalizar los rendimientos con respecto al capital invertido, los resultados son agnósticos a la extension de tierra, facilitando comparaciones significativas entre diferentes cultivos y regiones.
 
-El componente cíclico en la fórmula de rendimientos agrícolas cumple una función fundamental de estandarización temporal. Este multiplicador ajusta los rendimientos según la frecuencia potencial de cosecha anual, permitiendo una comparación equitativa entre cultivos de diferentes duraciones. Por ejemplo, un cultivo trimestral tendría un multiplicador de 4, reflejando su potencial de producción cuatro veces al año. Esta consideración es crucial por dos razones principales: permite comparar adecuadamente cultivos de diferentes duraciones y reconoce el valor del tiempo en términos de rotación de capital. Sin embargo, es importante notar que representa un máximo teórico, sujeto a restricciones prácticas como condiciones climáticas y recursos disponibles. 
+El componente cíclico en la fórmula de rendimientos agrícolas cumple una función fundamental de estandarización temporal. Este multiplicador ajusta los rendimientos según la frecuencia potencial de cosecha anual, permitiendo una comparación equitativa entre cultivos de diferentes duraciones. Por ejemplo, un cultivo trimestral tendría un multiplicador de 4, reflejando su potencial de producción cuatro veces al año. Esta consideración es crucial por dos razones principales: permite comparar adecuadamente cultivos de diferentes duraciones y reconoce el valor del tiempo en términos de rotación de capital. Sin embargo, es importante notar que representa un máximo teórico, sujeto a restricciones prácticas como condiciones climáticas y recursos disponibles.
 
 El resultado final es la rentabilidad relativa anual para cada cultivo de nuestro universo de trabajo, durante el período 2002 hasta 2023. La serie temporal resultante representa una medida estandarizada del desempeño financiero de cada cultivo, expresada como un rendimiento anualizado sobre el capital invertido. Esta métrica permite una comparación directa entre cultivos con diferentes características agronómicas.
 
@@ -144,7 +144,6 @@ El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su 
 
 La optimización de portafolios en esta investigación se basa en el cálculo de rendimientos agrícolas, tomando como activos 12 cultivos clave: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano. La elección de estos cultivos responde a dos factores principales. En primer lugar, se seleccionaron debido a su alta disponibilidad, facilitando así el análisis de rendimientos y costos de producción. En segundo lugar, estos rubros tienen una gran relevancia en la dieta dominicana, lo que asegura que los resultados del modelo sean representativos y aplicables para los agricultores que buscan maximizar su rentabilidad en contextos locales.
 
-
 ## Análisis de la estadística descriptiva
 
 {{< embed notebooks/eda.qmd#descriptive-stats >}}
@@ -153,13 +152,11 @@ El análisis de las estadísticas descriptivas del sector agrícola dominicano r
 
 El tercer grupo incluye cultivos que registran pérdidas consistentes, como el arroz, el maíz y la berenjena, con rentabilidades negativas de -108.25%, -78.6% y -80.4%, mientras que el ñame y la batata mantienen rentabilidades modestas pero positivas de 35.65% y 29.94%. Estos resultados, aunque sujetos a posibles limitaciones en la calidad de los datos, proporcionan una base sólida para comprender la dinámica económica del sector agrícola dominicano y sus distintos niveles de rendimiento financiero.
 
-
 ## Análisis exploratorio de los rendimientos de los rubros agrícolas
 
 El análisis de la evolución de la rentabilidad de los rubros agrícolas, más allá de evaluar las ganancias potenciales, nos permite comprender de manera implícita los riesgos asociados a los costos, precios y mercados. Esto es esencial para identificar las dinámicas económicas subyacentes que afectan la sostenibilidad de cada cultivo. Por ejemplo, en rubros como el aguacate y la auyama, su alta rentabilidad evidencia oportunidades económicas, pero al mismo tiempo resalta riesgos de mercado asociados a la volatilidad de los precios internacionales y a los costos de exportación (@fig-costs_by_crop). Esto indica que, aunque hay grandes posibilidades de ingresos, los productores están expuestos a fluctuaciones que pueden reducir drásticamente sus márgenes en años desfavorables.
 
-Por otro lado, cultivos como el arroz, que mantienen rentabilidades negativas, reflejan riesgos estructurales importantes. Estos riesgos no solo están relacionados con la competitividad del mercado, sino también con los costos de producción y los insumos, que en este caso parecen superar consistentemente los ingresos generados
-(@fig-price_by_crop). Este desequilibrio muestra cómo los riesgos financieros y de insumo impactan directamente en la rentabilidad.
+Por otro lado, cultivos como el arroz, que mantienen rentabilidades negativas, reflejan riesgos estructurales importantes. Estos riesgos no solo están relacionados con la competitividad del mercado, sino también con los costos de producción y los insumos, que en este caso parecen superar consistentemente los ingresos generados (@fig-price_by_crop). Este desequilibrio muestra cómo los riesgos financieros y de insumo impactan directamente en la rentabilidad.
 
 Rubros con rentabilidades más estables, como la papa y la yautía, indican una menor exposición a riesgos de mercado, probablemente debido a su demanda constante en el consumo local. Sin embargo, los costos crecientes, como se observa en las gráficas (@fig-profit_by_crop), representan un riesgo financiero latente que podría afectar negativamente su rentabilidad a largo plazo si no se mejoran los procesos productivos.
 
@@ -168,7 +165,6 @@ En cultivos como el maíz y la berenjena, la alta volatilidad de la rentabilidad
 Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de la rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en potencial de ganancias y aumenta su exposición a riesgos específicos.
 
 La volatilidad de los precios de los productos agrícolas puede traducirse en márgenes de ganancia más reducidos para los agricultores, especialmente en aquellos períodos en los que los costos de insumos, como fertilizantes o semillas, aumentan significativamente. Cuando los precios de los productos no reflejan de manera proporcional estos incrementos en los costos, los productores enfrentan una reducción en sus ingresos netos, lo que compromete la sostenibilidad de sus operaciones. Además, en ausencia de herramientas adecuadas como seguros agropecuarios, los agricultores más afectados por estas fluctuaciones pueden quedar atrapados en ciclos de endeudamiento, limitando aún más su capacidad de inversión y crecimiento.
-
 
 ## Análisis de la matriz de correlación de la rentabilidad de los rubros
 
@@ -216,7 +212,7 @@ La asignación residual del 2.3% a otros cultivos representa un refinamiento adi
 
 ![Histograma de los rendimientos del portafolio eficiente](notebooks/opt/efficient_frontier_by_risk.png){#fig-histogram}
 
-Como se puede observar en @fig-histogram, el análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de 252.57%, acompañado de una desviación estándar de 105.05%, lo que resulta en un ratio de Sharpe de 2.40. Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P 500 para 2024 es de 2.05, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil. 
+Como se puede observar en @fig-histogram, el análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de 252.57%, acompañado de una desviación estándar de 105.05%, lo que resulta en un ratio de Sharpe de 2.40. Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P 500 para 2024 es de 2.05, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil.
 
 Las medidas alternativas de dispersión ofrecen una perspectiva más profunda sobre la variabilidad de los retornos. La Desviación Media Absoluta (MAD) de 78.69% y la Desviación Media Geométrica (GMD) de 119.87% reflejan la naturaleza asimétrica de los retornos agrícolas, una característica inherente al sector debido a múltiples factores. Esta asimetría surge principalmente de la exposición a riesgos climáticos no lineales, la estacionalidad de la producción, y las dinámicas de precios en mercados agrícolas. La diferencia significativa entre MAD y GMD evidencia la presencia de eventos extremos que requieren especial atención en la gestión de riesgos.
 
@@ -240,7 +236,7 @@ La transición entre estos extremos demuestra dos efectos fundamentales: primero
 
 La convergencia de estas dinámicas encuentra su punto óptimo en el portfolio señalado con una estrella en la segunda gráfica de la frontera eficiente media-varianza, correspondiendo a una composición diversificada que se puede observar en la sección media del gráfico de estructura de activos. Este comportamiento subraya el balance entre diversificación y rendimiento esperado, claramente visible en la distribución más equilibrada de las áreas de cultivos en esta sección del gráfico.
 
-### Cambios de la estructura del portfolio ante diferentes metodologías de medición de riesgo. 
+### Cambios de la estructura del portfolio ante diferentes metodologías de medición de riesgo.
 
 ![Pesos por rubro según la métrica de riesgo](notebooks/opt/wheights-by-risk-metric-plot.png){#fig-wheights-by-risk-metric-plot}
 
@@ -263,6 +259,10 @@ El análisis de sensibilidad revela que la estructura óptima del portafolio es 
 La investigación demuestra que la diversificación sistemática basada en correlaciones entre cultivos puede mejorar significativamente la resiliencia económica de las explotaciones agrícolas. Este enfoque representa una innovación importante en la gestión agrícola dominicana, proporcionando una herramienta práctica para optimizar la selección de cultivos sin requerir cambios fundamentales en las prácticas existentes o inversiones significativas de capital.
 
 Las implicaciones de estos hallazgos son particularmente relevantes para el contexto dominicano, donde las limitaciones de capital y acceso a instrumentos financieros sofisticados han sido históricamente barreras para la modernización agrícola. La metodología propuesta ofrece una vía de mejora que es tanto práctica como accesible, permitiendo a los agricultores maximizar sus retornos y gestionar riesgos de manera más efectiva dentro de sus restricciones existentes.
+
+# Referencias bibliográficas
+
+[@aguacate2023; @miao2023; @polanco2023; @solano2024; @fao2022]
 
 {{< pagebreak >}}
 
