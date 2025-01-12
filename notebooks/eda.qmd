@@ -93,7 +93,7 @@ ds %>%
 
 ```{r}
 #| warning: false
-#| #| label: price-by-crop
+#| label: price-by-crop
 #| fig-cap: "Histórico de precios por rubro agrícola"
 ds %>%
     ggplot(aes(x = ano, y = precio_kg, color = rubro, group = rubro)) +
