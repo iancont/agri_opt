@@ -5,6 +5,9 @@ project:
     - index.qmd
     - ppt.qmd
 
+title: "Optimización de Portafolio Agrícola: Una Alternativa para la Mitigación de Riesgos en la República Dominicana"
+date: last-modified
+date-format: long
 
 author:
   - name: Ian Contreras
@@ -35,7 +38,6 @@ affiliations:
 toc: true
 bibliography: references.bib
 lang: es
-date: last-modified
 
 
 execute:

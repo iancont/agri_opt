@@ -1,5 +1,4 @@
 ---
-title: Optimización Agricola
 format:
   typst:
     toc: true
@@ -8,6 +7,7 @@ format:
 nocite: |
   @*
 ---
+
 # Introducción
 
 El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3\%$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4\%$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
@@ -247,13 +247,22 @@ La selección de la medida de riesgo más apropiada debe alinearse con las prác
 
 # Conclusiones
 
+La presente investigación ha desarrollado una metodología innovadora para optimizar la selección de cultivos en el contexto agrícola dominicano, adaptando la Teoría Moderna de Portafolios de Markowitz. Los resultados demuestran que esta aproximación puede generar una mejora sustancial en la gestión del riesgo y la rentabilidad agrícola, sin requerir inversiones significativas en tecnificación o cambios estructurales en las prácticas existentes.
+
+El portafolio óptimo identificado, compuesto principalmente por Auyama (34.2%), Yautía (29.0%), Guineo (28.4%) y Aguacate (6.1%), logra un ratio de Sharpe de 2.40, superando incluso referencias de mercado establecidas como el S&P 500. Esta composición no solo maximiza los retornos esperados sino que también proporciona una protección efectiva contra pérdidas extremas, con un Valor en Riesgo (VaR) del 70.58% y un CVaR del 18.02%, niveles manejables para operaciones agrícolas adecuadamente capitalizadas.
+
+El análisis de sensibilidad revela que la estructura óptima del portafolio es robusta ante diferentes medidas de riesgo, aunque las ponderaciones específicas varían según la métrica utilizada. Esto sugiere que la metodología puede adaptarse a diferentes perfiles de riesgo y preferencias de los agricultores, manteniendo su efectividad como herramienta de optimización.
+
+La investigación demuestra que la diversificación sistemática basada en correlaciones entre cultivos puede mejorar significativamente la resiliencia económica de las explotaciones agrícolas. Este enfoque representa una innovación importante en la gestión agrícola dominicana, proporcionando una herramienta práctica para optimizar la selección de cultivos sin requerir cambios fundamentales en las prácticas existentes o inversiones significativas de capital.
+
+Las implicaciones de estos hallazgos son particularmente relevantes para el contexto dominicano, donde las limitaciones de capital y acceso a instrumentos financieros sofisticados han sido históricamente barreras para la modernización agrícola. La metodología propuesta ofrece una vía de mejora que es tanto práctica como accesible, permitiendo a los agricultores maximizar sus retornos y gestionar riesgos de manera más efectiva dentro de sus restricciones existentes.
+
 
 # Anexos
 
 {{< embed notebooks/opt_anual.ipynb#port-opt >}}
 
 {{< embed notebooks/opt_anual.ipynb#wheights-by-risk-metric >}}
-
 
 ![Evolución de los Costos de Producción por Rubros Agrícolas, 2002-2022](notebooks/eda/costs_by_crop.png){#fig-costs_by_crop}
 
