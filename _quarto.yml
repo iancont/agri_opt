@@ -39,6 +39,8 @@ toc: true
 bibliography: references.bib
 lang: es
 
+nocite: |
+  @*
 
 execute:
   freeze: true

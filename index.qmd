@@ -1,12 +1,11 @@
 ---
 format:
   typst:
-    toc: true
     section-numbering: 1.1.a
     keep-typ: true
-nocite: |
-  @*
 ---
+
+{{< pagebreak >}}
 
 # Introducción
 
@@ -29,6 +28,8 @@ Esta metodología representa un mecanismo de tecnificación implícita que permi
 Un aspecto fundamental de esta metodología es su capacidad para maximizar el beneficio económico ajustado por riesgo. A diferencia de enfoques tradicionales que requieren inversiones sustanciales en tecnificación o modernización agrícola,esta optimización actúa como un mecanismo de tecnificación implícita, ya que mejora la productividad global de la explotación agrícola a través de una asignación más eficiente de los recursos existentes, sin requerir inversiones significativas de capital inicial. Al identificar la combinación óptima de cultivos que maximiza el rendimiento para un nivel dado de riesgo, los agricultores pueden mejorar sus resultados económicos utilizando los mismos recursos productivos, pero de manera más estratégica y eficiente. Este enfoque es particularmente valioso en el contexto dominicano, donde las limitaciones de capital y acceso al financiamiento constituyen barreras significativas para la modernización agrícola tradicional.
 
 El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de gestión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicanos estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
+
+{{< pagebreak >}}
 
 # Metodología
 
@@ -137,6 +138,8 @@ El resultado final es la rentabilidad relativa anual para cada cultivo de nuestr
 
 El rendimiento esperado de cada cultivo ($r_i$) merece especial atención en su cálculo. Si bien existen diversos métodos para su estimación, el más utilizado es el promedio aritmético de los rendimientos históricos, asumiendo que estos siguen una distribución normal. Este rendimiento se calcula considerando cuatro componentes fundamentales: La productividad física promedio anual del cultivo, medida en kilogramos por tarea (kg/tarea); Los precios promedio anual
 
+{{< pagebreak >}}
+
 # Datos
 
 La optimización de portafolios en esta investigación se basa en el cálculo de rendimientos agrícolas, tomando como activos 12 cultivos clave: arroz, maíz, papa blanca, batata, yautía blanca, ñame, berenjena criolla, auyama, aguacate, guineo verde y plátano. La elección de estos cultivos responde a dos factores principales. En primer lugar, se seleccionaron debido a su alta disponibilidad, facilitando así el análisis de rendimientos y costos de producción. En segundo lugar, estos rubros tienen una gran relevancia en la dieta dominicana, lo que asegura que los resultados del modelo sean representativos y aplicables para los agricultores que buscan maximizar su rentabilidad en contextos locales.
@@ -172,6 +175,8 @@ La volatilidad de los precios de los productos agrícolas puede traducirse en m�
 ![Agrupamiento jerárquico de los cultivos por similitud de riesgo](notebooks/opt/cluster.png){#fig-cluster}
 
 La matriz de correlación @fig-cluster entre rentabilidades agrícolas revela patrones significativos para la gestión de riesgos en el sector. La fuerte correlación positiva entre cultivos como el guineo y el plátano indica que estos productos tienden a comportarse de manera similar ante cambios en el mercado y condiciones climáticas, limitando su efectividad para la diversificación de riesgos. En contraste, cultivos como el arroz y la berenjena, que muestran correlaciones bajas o negativas con otros rubros, representan oportunidades valiosas para la diversificación del portafolio agrícola, permitiendo mitigar el impacto de fluctuaciones adversas en el mercado. Esta distinción entre cultivos altamente correlacionados y aquellos con baja correlación proporciona una base fundamental para desarrollar estrategias de producción más resilientes, especialmente cuando se combina la producción de cultivos complementarios que responden de manera diferente a las condiciones del mercado y factores climáticos.
+
+{{< pagebreak >}}
 
 # Resultados
 
@@ -245,6 +250,8 @@ Como se observa en la @fig-wheights-by-risk-metric-plot, la elección de la medi
 
 La selección de la medida de riesgo más apropiada debe alinearse con las prácticas agrícolas establecidas y las preferencias específicas del agricultor. Por ejemplo, un agricultor que tradicionalmente ha diversificado sus cultivos para mantener una producción estable podría encontrar más útil la optimización basada en desviación estándar, que como se observa en la @fig-wheights-by-risk-metric-plot, presenta una distribución más equilibrada entre los cultivos. Por otro lado, un agricultor que depende de líneas de crédito estacionales o que enfrenta restricciones de flujo de efectivo podría preferir medidas como el CVaR o el drawdown máximo, concentran las inversiones en cultivos con menor probabilidad de pérdidas extremas. La elección final de la medida de riesgo debe considerar no solo las características matemáticas de cada métrica, sino también cómo estas se alinean con los objetivos operativos y las restricciones prácticas del agricultor.
 
+{{< pagebreak >}}
+
 # Conclusiones
 
 La presente investigación ha desarrollado una metodología innovadora para optimizar la selección de cultivos en el contexto agrícola dominicano, adaptando la Teoría Moderna de Portafolios de Markowitz. Los resultados demuestran que esta aproximación puede generar una mejora sustancial en la gestión del riesgo y la rentabilidad agrícola, sin requerir inversiones significativas en tecnificación o cambios estructurales en las prácticas existentes.
@@ -257,6 +264,7 @@ La investigación demuestra que la diversificación sistemática basada en corre
 
 Las implicaciones de estos hallazgos son particularmente relevantes para el contexto dominicano, donde las limitaciones de capital y acceso a instrumentos financieros sofisticados han sido históricamente barreras para la modernización agrícola. La metodología propuesta ofrece una vía de mejora que es tanto práctica como accesible, permitiendo a los agricultores maximizar sus retornos y gestionar riesgos de manera más efectiva dentro de sus restricciones existentes.
 
+{{< pagebreak >}}
 
 # Anexos
 
@@ -269,3 +277,5 @@ Las implicaciones de estos hallazgos son particularmente relevantes para el cont
 ![Evolución de los Precios de Venta por Rubros Agrícolas, 2002-2022](notebooks/eda/prices_by_crop.png){#fig-price_by_crop}
 
 ![Evolución de las Rentabilidades por Rubros Agrícolas, 2002-2022](notebooks/eda/profitability_by_crop.png){#fig-profit_by_crop}
+
+{{< pagebreak >}}

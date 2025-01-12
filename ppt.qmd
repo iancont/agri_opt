@@ -1,7 +1,5 @@
 ---
 format: clean-typst
-nocite: |
-  @*
 ---
 
 ## Contexto del sector
