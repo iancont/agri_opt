@@ -303,7 +303,7 @@
       affiliation: [],
       email: [] ),
     ),
-  date: [2025-01-11],
+  date: [2025-01-12],
   lang: "es",
   sectionnumbering: "1.1.a",
   toc: true,
@@ -315,7 +315,7 @@
 
 = Introducción
 <introducción>
-El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3 %$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4 %$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
+El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3 %$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4 %$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficie El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3 %$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4 %$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
 
 Una preocupación primordial es la estructura altamente concentrada de la propiedad de la tierra, donde el $77 %$ de los productores operan parcelas menores a $4.5$ hectáreas, mientras que el $10 %$ de los grandes productores controlan el $61 %$ de la tierra agrícola. Esta distribución asimétrica genera barreras sustanciales para que los pequeños productores alcancen economías de escala y accedan a instrumentos sofisticados de gestión de riesgos. La situación se agrava por una infraestructura rural deficiente, incluyendo sistemas de riego inadecuados, instalaciones de almacenamiento limitadas y redes de transporte subdesarrolladas, lo que incrementa significativamente los costos de producción y transacción.
 
@@ -327,13 +327,31 @@ La ausencia de herramientas efectivas de gestión de riesgos en la agricultura d
 
 En la práctica, los agricultores dominicanos carecen de estrategias efectivas para la mitigación de riesgos. Aunque la diversificación de cultivos podría teóricamente ayudar a gestionar el riesgo, la mayoría de los productores no tienen suficiente extensión de tierra para implementar estrategias de diversificación efectivas. Aquellos que intentan diversificar a menudo lo hacen de manera subóptima, típicamente basando sus decisiones en los rendimientos del año anterior en lugar de un análisis comprensivo de riesgo-retorno. Este enfoque no considera las condiciones cambiantes del mercado ni la evolución del panorama de riesgos.
 
-Ante esta problemática, la presente investigación propone desarrollar una metodología de optimización ajustada por riesgo para la selección de cultivos agrícolas que maximice los beneficios económicos de los productores. Basándonos en el trabajo de @miao2023, quien aplicó la teoría de portafolio a la asignación de recursos agrícolas, proponemos un marco que maximiza los rendimientos ajustados por riesgo considerando las restricciones específicas que enfrentan los agricultores dominicanos. La innovación clave de nuestra metodología radica en su enfoque agnóstico a las fallas del mercado, proporcionando una herramienta práctica para optimizar la selección de cultivos dentro de las restricciones existentes, sin requerir cambios institucionales o nuevos instrumentos financieros.
+Ante esta problemática, la presente investigación propone desarrollar una metodología de optimización ajustada por riesgo para la selección de cultivos agrícolas que maximice los beneficios económicos de los productores. Basándonos en el trabajo de @miao_optimization_2023, quien aplicó la teoría de portafolio a la asignación de recursos agrícolas, proponemos un marco que maximiza los rendimientos ajustados por riesgo considerando las restricciones específicas que enfrentan los agricultores dominicanos. La innovación clave de nuestra metodología radica en su enfoque agnóstico a las fallas del mercado, proporcionando una herramienta práctica para optimizar la selección de cultivos dentro de las restricciones existentes, sin requerir cambios institucionales o nuevos instrumentos financieros.
 
 Esta metodología representa un mecanismo de tecnificación implícita que permite mejorar la productividad de la cosecha sin necesidad de aumentar significativamente el capital inicial. A través de la optimización sistemática de la selección de cultivos, los agricultores pueden maximizar sus beneficios económicos mientras gestionan efectivamente los riesgos inherentes a la producción agrícola.
 
 Un aspecto fundamental de esta metodología es su capacidad para maximizar el beneficio económico ajustado por riesgo. A diferencia de enfoques tradicionales que requieren inversiones sustanciales en tecnificación o modernización agrícola,esta optimización actúa como un mecanismo de tecnificación implícita, ya que mejora la productividad global de la explotación agrícola a través de una asignación más eficiente de los recursos existentes, sin requerir inversiones significativas de capital inicial. Al identificar la combinación óptima de cultivos que maximiza el rendimiento para un nivel dado de riesgo, los agricultores pueden mejorar sus resultados económicos utilizando los mismos recursos productivos, pero de manera más estratégica y eficiente. Este enfoque es particularmente valioso en el contexto dominicano, donde las limitaciones de capital y acceso al financiamiento constituyen barreras significativas para la modernización agrícola tradicional.
 
-El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de g estión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicano.
+El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de gestión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicano.ncias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
+
+Una preocupación primordial es la estructura altamente concentrada de la propiedad de la tierra, donde el $77 %$ de los productores operan parcelas menores a $4.5$ hectáreas, mientras que el $10 %$ de los grandes productores controlan el $61 %$ de la tierra agrícola. Esta distribución asimétrica genera barreras sustanciales para que los pequeños productores alcancen economías de escala y accedan a instrumentos sofisticados de gestión de riesgos. La situación se agrava por una infraestructura rural deficiente, incluyendo sistemas de riego inadecuados, instalaciones de almacenamiento limitadas y redes de transporte subdesarrolladas, lo que incrementa significativamente los costos de producción y transacción.
+
+El sector agrícola dominicano enfrenta riesgos multidimensionales que impactan severamente su competitividad internacional. Los riesgos climáticos, particularmente huracanes, sequías e inundaciones, generan pérdidas sustanciales en la producción. Los riesgos de mercado, derivados de la volatilidad de precios y posiciones desfavorables de negociación con intermediarios en la cadena de valor, crean presiones económicas adicionales. La situación es particularmente aguda para productos con curvas de oferta inelástica y ciclos de cosecha anual concentrados, como el arroz, donde los productores tienen capacidad limitada para responder a las señales del mercado.
+
+La exposición a riesgos biológicos, incluyendo plagas y enfermedades, combinada con el acceso limitado a instrumentos financieros como seguros agrícolas, contratos futuros y mecanismos de cobertura, crea una situación de alta vulnerabilidad. Los pequeños productores, que constituyen la mayoría, carecen de las economías de escala necesarias para costear estrategias tradicionales de mitigación de riesgos. Los altos costos de transacción e ineficiencias operativas hacen que las primas de seguros sean prohibitivamente caras en relación con los costos de producción para la mayoría de los agricultores locales.
+
+La ausencia de herramientas efectivas de gestión de riesgos en la agricultura dominicana refleja fallas estructurales de mercado más profundas. Los instrumentos financieros tradicionales resultan inadecuados debido a varios factores: la pequeña extensión promedio de las explotaciones agrícolas, los bajos niveles de productividad y los altos costos de transacción hacen que los esquemas convencionales de seguros sean económicamente inviables para la mayoría de los productores. Esta situación se ve agravada por la naturaleza informal de muchas operaciones agrícolas y la limitada educación financiera, que crean barreras adicionales para acceder a herramientas sofisticadas de gestión de riesgos.
+
+En la práctica, los agricultores dominicanos carecen de estrategias efectivas para la mitigación de riesgos. Aunque la diversificación de cultivos podría teóricamente ayudar a gestionar el riesgo, la mayoría de los productores no tienen suficiente extensión de tierra para implementar estrategias de diversificación efectivas. Aquellos que intentan diversificar a menudo lo hacen de manera subóptima, típicamente basando sus decisiones en los rendimientos del año anterior en lugar de un análisis comprensivo de riesgo-retorno. Este enfoque no considera las condiciones cambiantes del mercado ni la evolución del panorama de riesgos.
+
+Ante esta problemática, la presente investigación propone desarrollar una metodología de optimización ajustada por riesgo para la selección de cultivos agrícolas que maximice los beneficios económicos de los productores. Basándonos en el trabajo de @miao_optimization_2023, quien aplicó la teoría de portafolio a la asignación de recursos agrícolas, proponemos un marco que maximiza los rendimientos ajustados por riesgo considerando las restricciones específicas que enfrentan los agricultores dominicanos. La innovación clave de nuestra metodología radica en su enfoque agnóstico a las fallas del mercado, proporcionando una herramienta práctica para optimizar la selección de cultivos dentro de las restricciones existentes, sin requerir cambios institucionales o nuevos instrumentos financieros.
+
+Esta metodología representa un mecanismo de tecnificación implícita que permite mejorar la productividad de la cosecha sin necesidad de aumentar significativamente el capital inicial. A través de la optimización sistemática de la selección de cultivos, los agricultores pueden maximizar sus beneficios económicos mientras gestionan efectivamente los riesgos inherentes a la producción agrícola.
+
+Un aspecto fundamental de esta metodología es su capacidad para maximizar el beneficio económico ajustado por riesgo. A diferencia de enfoques tradicionales que requieren inversiones sustanciales en tecnificación o modernización agrícola,esta optimización actúa como un mecanismo de tecnificación implícita, ya que mejora la productividad global de la explotación agrícola a través de una asignación más eficiente de los recursos existentes, sin requerir inversiones significativas de capital inicial. Al identificar la combinación óptima de cultivos que maximiza el rendimiento para un nivel dado de riesgo, los agricultores pueden mejorar sus resultados económicos utilizando los mismos recursos productivos, pero de manera más estratégica y eficiente. Este enfoque es particularmente valioso en el contexto dominicano, donde las limitaciones de capital y acceso al financiamiento constituyen barreras significativas para la modernización agrícola tradicional.
+
+El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de gestión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicano.
 
 = Metodología
 <metodología>
@@ -448,9 +466,18 @@ supplement: "Figura",
 ]
 = Resultados
 <resultados>
-#block[
+La siguiente sección presenta la estimación de ponderaciones óptimas se realizó para determinar la composición del portafolio agrícola correspondiente al primer trimestre de 2023. El análisis se fundamenta en datos históricos del período 2002-2022, a partir de los cuales se estimaron los retornos medios y la varianza de la canasta de cultivos seleccionados. Se estableció una tasa libre de riesgo del 8%, calculada como la media redondeada de la tasa de los instrumentos a un año del Banco Central durante el período de estudio. Las ponderaciones resultantes representan la distribución óptima de cultivos a implementar en 2023.
+
+El análisis de resultados se estructura en dos componentes principales. El primero comprende la estimación del portafolio de máximo rendimiento ajustado por riesgo, visualizado mediante la frontera eficiente y determinado por el punto de tangencia con la Línea del Mercado de Capitales (CML). Este componente incluye un análisis detallado de las características estadísticas del portafolio resultante, incluyendo media, desviación estándar y CVaR en diversos niveles de confianza, validando los resultados mediante su correlación con el análisis exploratorio de rentabilidades.
+
+El segundo componente examina la evolución de las ponderaciones en función de las preferencias de riesgo del agricultor. Este análisis evalúa la robustez de la optimización al examinar cómo varían las asignaciones de cultivos ante cambios en las ponderaciones del riesgo del portafolio y en las métricas de riesgo seleccionadas por el agricultor.
+
+== Estimación del portafolio de máximo Sharpe Ratio
+<estimación-del-portafolio-de-máximo-sharpe-ratio>
+=== La Frontera Eficiente del Portafolio Agrícola
+<la-frontera-eficiente-del-portafolio-agrícola>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-efficient-frontier-plot-output-1.png"))
+#box(image("notebooks/opt/efficient-frontier-plot.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -459,12 +486,21 @@ Frontera eficiente
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-efficient-frontier-plot>
 
 
-]
-#block[
+La resolución iterativa del problema de optimización para diferentes niveles de riesgo genera el conjunto de portafolios que conforman la frontera eficiente, representada en la gráfica @fig-efficient-frontier-plot por la curva amarilla. Esta curva ilustra la relación fundamental entre riesgo y rendimiento en el contexto de la diversificación agrícola, donde cada punto representa una combinación óptima de cultivos para un nivel específico de riesgo.
+
+La geometría de la frontera eficiente estimada exhibe características particulares que merecen atención. Iniciando en el extremo inferior izquierdo, donde se encuentra el portafolio de mínima varianza con una desviación estándar cercana al 1000%, la curva asciende de manera cóncava hasta alcanzar retornos esperados superiores al 150000%. Esta concavidad refleja los rendimientos marginales decrecientes en la relación riesgo-retorno: a medida que se incrementa el riesgo asumido, los aumentos en el retorno esperado son proporcionalmente menores.
+
+El portafolio óptimo, señalado con una estrella roja en la gráfica, se ubica en el punto de tangencia entre la frontera eficiente y la Línea del Mercado de Capitales (CML). Este punto específico, con una desviación estándar aproximada de 2000% y un retorno esperado de 65000%, representa la combinación de cultivos que maximiza el ratio de Sharpe, ofreciendo la mejor compensación entre riesgo y rendimiento dado el entorno de mercado y la tasa libre de riesgo establecida del 8%.
+
+La magnitud de los valores observados en los ejes requiere una contextualización específica: las elevadas cifras de retorno y riesgo son características inherentes del sector agrícola, donde la variabilidad climática y las condiciones de mercado pueden generar fluctuaciones significativas en los resultados financieros. Esta volatilidad intrínseca subraya la importancia crítica de una diversificación óptima en la planificación agrícola. Es pertinente señalar que, si bien pueden existir limitaciones en los datos de entrada utilizados, estas no comprometen la robustez metodológica del análisis ni la validez de las conclusiones obtenidas.
+
+=== Composición del Portafolio Óptimo
+<composición-del-portafolio-óptimo>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-pie-plot-output-1.png"))
+#box(image("notebooks/opt/pie_plot.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -473,12 +509,21 @@ Ponderación de la cartera óptima
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-pie-plot>
 
 
-]
-#block[
+El portafolio óptimo, representado en la gráfica @fig-pie-plot identificado mediante la optimización de Markowitz exhibe una distribución significativa en cuatro cultivos principales: Auyama (34.2%), Yautía (29.0%), Guineo (28.4%) y Aguacate (6.1%), con el restante 2.3% distribuido entre otros rubros. Esta composición refleja una estrategia sofisticada de optimización que equilibra la maximización del retorno esperado con la gestión efectiva del riesgo mediante diversificación.
+
+La asignación de pesos demuestra una marcada preferencia por cultivos de alta rentabilidad esperada, donde la Auyama, el Aguacate y la Yautía se encuentran entre los cuatro cultivos más rentables del universo analizado. Sin embargo, la inclusión del Guineo, que presenta una rentabilidad esperada negativa, revela la importancia de las correlaciones en la construcción del portafolio. El Guineo exhibe una correlación negativa significativa con la Auyama, actuando como una cobertura natural contra las fluctuaciones adversas en el rendimiento del cultivo principal.
+
+Este patrón de diversificación se sustenta en la estructura de correlaciones observada en el mapa de calor presentado. Los cultivos seleccionados mantienen correlaciones moderadas entre sí (aproximadamente 0.25 entre Auyama, Yautía y Aguacate), mientras que el Guineo proporciona el beneficio adicional de la correlación negativa. Esta estrategia de diversificación permite al portafolio mantener un perfil de riesgo-retorno favorable, donde las pérdidas potenciales en un cultivo pueden ser compensadas por el rendimiento positivo en otros.
+
+La asignación residual del 2.3% a otros cultivos representa un refinamiento adicional en la diversificación, aunque su impacto marginal en la reducción del riesgo del portafolio es limitado debido a sus mayores correlaciones con los componentes principales. Esta estructura de portafolio resultante demuestra la efectividad del modelo de optimización en la identificación de una combinación de cultivos que maximiza el ratio de Sharpe mientras mantiene una exposición controlada a los diversos factores de riesgo del mercado agrícola.
+
+=== Estadísticas descriptivas del portafolio óptimo
+<estadísticas-descriptivas-del-portafolio-óptimo>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-histogram-output-1.png"))
+#box(image("notebooks/opt/efficient_frontier_by_risk.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -487,28 +532,48 @@ Histograma de los rendimientos del portafolio eficiente
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-histogram>
 
 
-]
+Como se puede observar en @fig-histogram, el análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de 252.57%, acompañado de una desviación estándar de 105.05%, lo que resulta en un ratio de Sharpe de 2.40. Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P 500 para 2024 es de 2.05, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil.
+
+Las medidas alternativas de dispersión ofrecen una perspectiva más profunda sobre la variabilidad de los retornos. La Desviación Media Absoluta (MAD) de 78.69% y la Desviación Media Geométrica (GMD) de 119.87% reflejan la naturaleza asimétrica de los retornos agrícolas, una característica inherente al sector debido a múltiples factores. Esta asimetría surge principalmente de la exposición a riesgos climáticos no lineales, la estacionalidad de la producción, y las dinámicas de precios en mercados agrícolas. La diferencia significativa entre MAD y GMD evidencia la presencia de eventos extremos que requieren especial atención en la gestión de riesgos.
+
+Las métricas de riesgo proporcionan información crucial para la planificación de contingencias. El Valor en Riesgo (VaR) al 95% de confianza indica una pérdida máxima potencial de 70.58%, mientras que el CVaR señala una pérdida esperada de 18.02% en el 5% de los escenarios más adversos. Esta cuantificación del riesgo tiene implicaciones prácticas directas: por ejemplo, sugiere que la cobertura de seguros podría optimizarse para proteger contra pérdidas máximas del 70.58%, en lugar de asegurar el valor total de la producción, resultando en una gestión más eficiente de los costos de protección.
+
+Las medidas de riesgo de cola complementarias, EVaR (15.86%) y RLVaR (15.66%), junto con la peor realización histórica observada de 15.40%, confirman la robustez de la estrategia de diversificación. La convergencia de estas métricas alrededor del 15-18% sugiere que, incluso en escenarios extremadamente adversos, las pérdidas se mantienen en niveles manejables para operaciones agrícolas adecuadamente capitalizadas. Este perfil de riesgo es especialmente relevante para la sostenibilidad operativa, ya que permite mantener un flujo de caja estable incluso durante períodos desfavorables.
+
+La asimetría positiva en la distribución de retornos, evidenciada por la diferencia sustancial entre la media y las medidas de riesgo de cola, indica que el portafolio está estructurado para capturar beneficios significativos en condiciones favorables de mercado mientras mantiene una protección efectiva contra pérdidas extremas. Esta característica es fundamental para la viabilidad a largo plazo de las operaciones agrícolas, donde la resiliencia ante condiciones adversas es tan crucial como la capacidad de aprovechar oportunidades de mercado favorables.
+
 == Análisis de sensibilidad
 <análisis-de-sensibilidad>
-#block[
+=== Cambios de la estructura del portafolio ante variaciones de la varianza deseada
+<cambios-de-la-estructura-del-portafolio-ante-variaciones-de-la-varianza-deseada>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-efficient-frontier-by-risk-output-1.png"))
+#box(image("notebooks/opt/efficient_frontier_by_risk.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
-Frontera eficiente según el nivel de riesgo
+Portafolio óptimo según el nivel de riesgo
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-efficient-frontier-by-risk>
 
 
-]
-#block[
+La estructura de la frontera eficiente, ilustrada en la gráfica @fig-efficient-frontier-by-risk, presenta la evolución de las ponderaciones de cada cultivo a medida que aumenta el riesgo esperado del portfolio.
+
+El portfolio de mínima varianza, ubicado en el extremo izquierdo de la gráfica, está compuesto principalmente por arroz, guineo y yuca, exhibiendo rendimientos marginalmente negativos pero con volatilidad extraordinariamente baja, lo cual se refleja en las áreas dominantes de estos cultivos en la parte inicial del gráfico de estructura de activos. En contraste, el portfolio de máximo retorno, situado en el extremo derecho, concentra la inversión exclusivamente en auyama, visualizado por el área naranja que domina completamente la composición en este extremo.
+
+La transición entre estos extremos demuestra dos efectos fundamentales: primero, partiendo del portfolio de mínima varianza, se observa una diversificación progresiva que optimiza la relación riesgo-retorno, evidenciada por la distribución más equilibrada de las áreas coloreadas en la sección media del gráfico; segundo, desde el portfolio de máximo retorno, se evidencia una incorporación sistemática de cultivos, visualizada por la gradual reducción del área naranja de la auyama y la aparición de otros cultivos en la composición.
+
+La convergencia de estas dinámicas encuentra su punto óptimo en el portfolio señalado con una estrella en la segunda gráfica de la frontera eficiente media-varianza, correspondiendo a una composición diversificada que se puede observar en la sección media del gráfico de estructura de activos. Este comportamiento subraya el balance entre diversificación y rendimiento esperado, claramente visible en la distribución más equilibrada de las áreas de cultivos en esta sección del gráfico.
+
+=== Cambios de la estructura del portfolio ante diferentes metodologías de medición de riesgo.
+<cambios-de-la-estructura-del-portfolio-ante-diferentes-metodologías-de-medición-de-riesgo.>
 #figure([
-#box(image("index_files/figure-typst/notebooks-opt_anual-wheights-by-risk-metric-plot-output-1.png"))
+#box(image("notebooks/opt/wheights-by-risk-metric-plot.png"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -517,44 +582,19 @@ Pesos por rubro según la métrica de riesgo
 kind: "quarto-float-fig", 
 supplement: "Figura", 
 )
+<fig-wheights-by-risk-metric-plot>
 
 
-]
+Las diferentes medidas de riesgo capturan distintas características de la distribución de los retornos, cada una enfatizando aspectos específicos del riesgo financiero. Las medidas tradicionales como la desviación estándar y la desviación absoluta media evalúan la dispersión total de los retornos, considerando tanto movimientos positivos como negativos como riesgosos. En contraste, medidas asimétricas como la semi-desviación estándar y los momentos parciales inferiores se concentran exclusivamente en la dispersión por debajo de un umbral objetivo, reconociendo que la volatilidad al alza no representa un verdadero riesgo para el inversionista. Las medidas basadas en drawdown y las medidas de valor en riesgo capturan características más específicas del riesgo a la baja, donde las primeras evalúan las pérdidas acumuladas desde máximos históricos, siendo particularmente relevantes para identificar períodos sostenidos de pérdidas, mientras que las segundas se enfocan en cuantificar las pérdidas extremas en la cola de la distribución.
+
+Como se observa en la @fig-wheights-by-risk-metric-plot, la elección de la medida de riesgo tiene implicaciones sustanciales en la composición óptima del portfolio. El portfolio optimizado bajo desviación estándar (MV) asigna una ponderación significativa al guineo (28.41%) a pesar de sus rendimientos esperados negativos, lo cual se explica por su baja volatilidad total y sus correlaciones negativas o cercanas a cero con otros cultivos, particularmente con la auyama (34.25%), que es el activo de mayor rendimiento. Sin embargo, las medidas de riesgo asimétrico y a la baja, como el CVaR y EVaR, reducen significativamente la exposición al guineo a 7.86%, mientras concentran la inversión en yautía (82.49%), como se evidencia en las columnas correspondientes de la Figura 2. Esta divergencia en las ponderaciones refleja cómo las diferentes medidas de riesgo capturan distintos aspectos de la incertidumbre: mientras la desviación estándar busca minimizar la volatilidad total del portfolio, las medidas de riesgo a la baja se enfocan en mitigar específicamente las pérdidas extremas, resultando en composiciones de portfolio sustancialmente diferentes.
+
+La selección de la medida de riesgo más apropiada debe alinearse con las prácticas agrícolas establecidas y las preferencias específicas del agricultor. Por ejemplo, un agricultor que tradicionalmente ha diversificado sus cultivos para mantener una producción estable podría encontrar más útil la optimización basada en desviación estándar, que como se observa en la @fig-wheights-by-risk-metric-plot, presenta una distribución más equilibrada entre los cultivos. Por otro lado, un agricultor que depende de líneas de crédito estacionales o que enfrenta restricciones de flujo de efectivo podría preferir medidas como el CVaR o el drawdown máximo, que según la Figura 2, concentran las inversiones en cultivos con menor probabilidad de pérdidas extremas. La elección final de la medida de riesgo debe considerar no solo las características matemáticas de cada métrica, sino también cómo estas se alinean con los objetivos operativos y las restricciones prácticas del agricultor.
+
 = Conclusiones
 <conclusiones>
 = Anexos
 <anexos>
-#block[
-#table(
-  columns: 13,
-  align: (auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,),
-  table.header([~], [Aguacate], [Arroz], [Auyama], [Batata], [Berenjena], [Guineo], [Maíz], [Papa], [Plátano], [Yautía], [Yuca], [Ñame],),
-  table.hline(),
-  [weights], [0.06%], [0.00%], [0.34%], [0.00%], [0.00%], [0.28%], [0.00%], [0.02%], [0.00%], [0.29%], [0.00%], [0.00%],
-)
-]
-#block[
-#table(
-  columns: 14,
-  align: (auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,),
-  table.header([~], [MV], [MAD], [MSV], [FLPM], [SLPM], [CVaR], [EVaR], [WR], [MDD], [ADD], [CDaR], [UCI], [EDaR],),
-  table.hline(),
-  [Aguacate], table.cell(fill: rgb("#ebf7b0"))[#set text(fill: rgb("#000000")); 6.10%], table.cell(fill: rgb("#fdfeda"))[#set text(fill: rgb("#000000")); 2.01%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 2.14%], table.cell(fill: rgb("#ebf7b0"))[#set text(fill: rgb("#000000")); 7.04%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 5.57%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 4.34%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 5.93%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 5.22%], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 4.58%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 3.18%],
-  [Arroz], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 1.46%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 1.24%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe4"))[#set text(fill: rgb("#000000")); 2.54%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 1.64%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.31%], table.cell(fill: rgb("#ffffe4"))[#set text(fill: rgb("#000000")); 2.60%], table.cell(fill: rgb("#feffdf"))[#set text(fill: rgb("#000000")); 2.99%],
-  [Auyama], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.25%], table.cell(fill: rgb("#e0f3a8"))[#set text(fill: rgb("#000000")); 13.56%], table.cell(fill: rgb("#6bc072"))[#set text(fill: rgb("#000000")); 26.92%], table.cell(fill: rgb("#208242"))[#set text(fill: rgb("#f1f1f1")); 27.86%], table.cell(fill: rgb("#8bce81"))[#set text(fill: rgb("#000000")); 18.70%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 9.64%], table.cell(fill: rgb("#b2df90"))[#set text(fill: rgb("#000000")); 15.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.39%], table.cell(fill: rgb("#4cb063"))[#set text(fill: rgb("#f1f1f1")); 21.47%], table.cell(fill: rgb("#9fd788"))[#set text(fill: rgb("#000000")); 16.32%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 44.09%],
-  [Batata], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f4fbb7"))[#set text(fill: rgb("#000000")); 5.54%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 5.13%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 5.00%], table.cell(fill: rgb("#f2fab5"))[#set text(fill: rgb("#000000")); 6.49%], table.cell(fill: rgb("#f9fdc2"))[#set text(fill: rgb("#000000")); 5.42%], table.cell(fill: rgb("#fafdc8"))[#set text(fill: rgb("#000000")); 5.26%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 4.10%],
-  [Berenjena], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fcfed3"))[#set text(fill: rgb("#000000")); 2.54%], table.cell(fill: rgb("#fbfed0"))[#set text(fill: rgb("#000000")); 2.76%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 3.28%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 2.38%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 3.08%], table.cell(fill: rgb("#fdfedb"))[#set text(fill: rgb("#000000")); 3.30%], table.cell(fill: rgb("#fcfed6"))[#set text(fill: rgb("#000000")); 4.16%],
-  [Guineo], table.cell(fill: rgb("#0c723b"))[#set text(fill: rgb("#f1f1f1")); 28.41%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 61.78%], table.cell(fill: rgb("#a2d88a"))[#set text(fill: rgb("#000000")); 20.22%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.61%], table.cell(fill: rgb("#fafdcb"))[#set text(fill: rgb("#000000")); 3.42%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 7.86%], table.cell(fill: rgb("#f8fcbe"))[#set text(fill: rgb("#000000")); 6.34%], table.cell(fill: rgb("#f9fdc4"))[#set text(fill: rgb("#000000")); 4.79%], table.cell(fill: rgb("#f8fcc0"))[#set text(fill: rgb("#000000")); 5.62%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 6.27%], table.cell(fill: rgb("#f9fdc7"))[#set text(fill: rgb("#000000")); 5.94%],
-  [Maíz], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 1.44%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.34%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.31%], table.cell(fill: rgb("#feffe2"))[#set text(fill: rgb("#000000")); 1.92%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.23%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.34%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 2.33%],
-  [Papa], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 2.27%], table.cell(fill: rgb("#fdfedd"))[#set text(fill: rgb("#000000")); 1.52%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 3.94%], table.cell(fill: rgb("#f9fdc5"))[#set text(fill: rgb("#000000")); 4.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 3.79%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 3.96%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 3.98%], table.cell(fill: rgb("#fcfed7"))[#set text(fill: rgb("#000000")); 3.71%], table.cell(fill: rgb("#feffde"))[#set text(fill: rgb("#000000")); 3.15%],
-  [Plátano], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.73%], table.cell(fill: rgb("#fbfdcf"))[#set text(fill: rgb("#000000")); 2.89%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.88%], table.cell(fill: rgb("#fbfed2"))[#set text(fill: rgb("#000000")); 3.56%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.35%], table.cell(fill: rgb("#fafdc9"))[#set text(fill: rgb("#000000")); 5.06%], table.cell(fill: rgb("#fcfed3"))[#set text(fill: rgb("#000000")); 4.55%],
-  [Yautía], table.cell(fill: rgb("#086e3a"))[#set text(fill: rgb("#f1f1f1")); 28.96%], table.cell(fill: rgb("#fbfdce"))[#set text(fill: rgb("#000000")); 4.19%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 50.72%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 36.51%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 40.64%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 82.49%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 38.87%], table.cell(fill: rgb("#288a47"))[#set text(fill: rgb("#f1f1f1")); 25.46%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 34.24%], table.cell(fill: rgb("#004529"))[#set text(fill: rgb("#f1f1f1")); 36.67%], table.cell(fill: rgb("#d5eea1"))[#set text(fill: rgb("#000000")); 13.33%],
-  [Yuca], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#eff9b3"))[#set text(fill: rgb("#000000")); 6.23%], table.cell(fill: rgb("#edf8b2"))[#set text(fill: rgb("#000000")); 7.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f8fdc1"))[#set text(fill: rgb("#000000")); 6.13%], table.cell(fill: rgb("#f8fcbd"))[#set text(fill: rgb("#000000")); 5.47%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 6.05%], table.cell(fill: rgb("#f7fcba"))[#set text(fill: rgb("#000000")); 6.55%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 5.38%],
-  [Ñame], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#d0ec9f"))[#set text(fill: rgb("#000000")); 16.94%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f0f9b4"))[#set text(fill: rgb("#000000")); 6.10%], table.cell(fill: rgb("#e6f5ac"))[#set text(fill: rgb("#000000")); 8.32%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#ffffe5"))[#set text(fill: rgb("#000000")); 0.00%], table.cell(fill: rgb("#f6fcb8"))[#set text(fill: rgb("#000000")); 7.03%], table.cell(fill: rgb("#fafdcc"))[#set text(fill: rgb("#000000")); 4.02%], table.cell(fill: rgb("#f7fcbc"))[#set text(fill: rgb("#000000")); 6.04%], table.cell(fill: rgb("#f2fab5"))[#set text(fill: rgb("#000000")); 7.32%], table.cell(fill: rgb("#f8fcc0"))[#set text(fill: rgb("#000000")); 6.81%],
-)
-Pesos óptimos de la cartera según la métrica de riesgo
-
-]
 
 
 
