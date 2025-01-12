@@ -1,10 +1,13 @@
 ---
 title: Optimización Agricola
-format: typst
+format:
+  typst:
+    toc: true
+    section-numbering: 1.1.a
+    keep-typ: true
 nocite: |
-  @* 
+  @*
 ---
-
 # Introducción
 
 El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3\%$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4\%$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
@@ -25,7 +28,7 @@ Esta metodología representa un mecanismo de tecnificación implícita que permi
 
 Un aspecto fundamental de esta metodología es su capacidad para maximizar el beneficio económico ajustado por riesgo. A diferencia de enfoques tradicionales que requieren inversiones sustanciales en tecnificación o modernización agrícola,esta optimización actúa como un mecanismo de tecnificación implícita, ya que mejora la productividad global de la explotación agrícola a través de una asignación más eficiente de los recursos existentes, sin requerir inversiones significativas de capital inicial. Al identificar la combinación óptima de cultivos que maximiza el rendimiento para un nivel dado de riesgo, los agricultores pueden mejorar sus resultados económicos utilizando los mismos recursos productivos, pero de manera más estratégica y eficiente. Este enfoque es particularmente valioso en el contexto dominicano, donde las limitaciones de capital y acceso al financiamiento constituyen barreras significativas para la modernización agrícola tradicional.
 
-El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de gestión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicano.
+El objetivo principal de esta investigación es desarrollar y validar una metodología de optimización de portafolio que permita a los productores agrícolas dominicanos maximizar los rendimientos ajustados por riesgo a través de una selección óptima de cultivos. Buscamos formular un modelo matemático que capture los compromisos entre riesgo y rendimiento en la producción agrícola, considerando las condiciones y restricciones del mercado local. La metodología incorporará restricciones de capacidad por cultivo o categoría de cultivos, extensiones mínimas de cosecha y otras restricciones específicas del productor. Este enfoque pretende proporcionar una solución pragmática a los desafíos de g estión de riesgos que enfrenta la agricultura dominicana, ofreciendo una metodología que puede implementarse independientemente del tamaño de la finca o el acceso a instrumentos financieros, contribuyendo así a mejorar la sostenibilidad económica del sector agrícola dominicano.
 
 # Metodología
 
@@ -116,7 +119,7 @@ Adoptar la MPT en la planificación agrícola implica un cambio paradigmático e
 
 ## Matriz técnica para el calculo de la rentabilidad por rubro Agrícola. 
 
-El proceso de optimizacio requiere como insumo un historico del retorno anual por cultivo para poder estimar los valores de retorno esperado y riesgo. Debido a insuficiencia de informacion, tuvimos que aproximar $r_i$ de cada cultivo utilizando una matriz tecnica. Dicha matriz, fue alimentada con datos fueron obtenidos del Ministerio de Agricultura de la República Dominicana
+El proceso de optimización requiere como insumo un histórico del retorno anual por cultivo para poder estimar los valores de retorno esperado y riesgo. Debido a la insuficiencia de información, tuvimos que aproximar $r_i$ de cada cultivo utilizando una matriz técnica. Dicha matriz fue alimentada con datos que fueron obtenidos del Ministerio de Agricultura de la República Dominicana.
 
 EL cálculo de los rendimientos agrícolas se realiza mediante una fórmula que integra varios componentes críticos: la productividad promedio anual (medida en kilogramos por tarea, kg/tarea), los precios promedio anuales al productor (en RD\$/kg), los costos anuales de producción por tarea y el ciclo de cosecha de cada cultivo.. La fórmula utilizada es la siguiente:
 
@@ -142,13 +145,73 @@ La optimización de portafolios en esta investigación se basa en el cálculo de
 
 Al analizar los rendimientos anuales de los rubros agrícolas en el período 2002-2022, se observa patrones diversos en su comportamiento. Rubros como el arroz, ñame, plátano y berenjena muestran una tendencia relativamente estable, con rendimientos que se mantienen mayoritariamente entre -2\%$ y 2\%$, lo cual evidencia una dinámica de producción consistente y menos expuesta a fluctuaciones externas significativas. Por otro lado, cultivos como el aguacate y la auyama destacan por su mayor volatilidad, con el aguacate registrando un pico notable que alcanza hasta un 12\%$ alrededor de 2016, seguido de una caída pronunciada. La auyama, por su parte, muestra una tendencia marcadamente alcista en los últimos años, alcanzando rendimientos superiores al 10\%$ hacia el final del período, lo que sugiere mejoras significativas en sus condiciones de producción. La yuca presenta un comportamiento moderadamente volátil, con fluctuaciones que se mueven entre 0\%$ y 2\%$, mostrando picos ocasionales cercanos al 2\%$ a lo largo del período. En cuanto a la papa, esta exhibe una volatilidad notable con rendimientos que oscilan entre 0\%$ y 3\%$, mostrando una serie de picos y valles que reflejan la sensibilidad del cultivo a diversos factores externos. El maíz muestra una tendencia gradualmente positiva aunque modesta, mientras que la batata mantiene un comportamiento relativamente estable hasta un incremento notable hacia 2020, superando el 2\%$. La yautía presenta un patrón particular con un pico significativo al inicio del período, seguido de una estabilización en niveles más moderados.
 
-Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de la rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en cultivos de mayor costo o riesgo, forzando a muchos pequeños agricultores a optar por estrategias más conservadoras, lo cual limita su potencial de ganancias y aumenta su exposición a riesgos específicos.
+Tras analizar los rendimientos, es evidente que las volatilidades en los precios han tenido implicaciones importantes en la dinámica de la rentabilidad para los agricultores dominicanos. La variabilidad en los precios de los insumos y productos agrícolas afecta directamente la capacidad de los productores para planificar su producción, ya que estas fluctuaciones generan incertidumbre en la previsión de ingresos y costos. Según datos disponibles, esta incertidumbre suele desincentivar la inversión en culepotencial de ganancias y aumenta su exposición a riesgos específicos.
 
 La volatilidad de los precios de los productos agrícolas puede traducirse en márgenes de ganancia más reducidos para los agricultores, especialmente en aquellos períodos en los que los costos de insumos, como fertilizantes o semillas, aumentan significativamente. Cuando los precios de los productos no reflejan de manera proporcional estos incrementos en los costos, los productores enfrentan una reducción en sus ingresos netos, lo que compromete la sostenibilidad de sus operaciones. Además, en ausencia de herramientas adecuadas como seguros agropecuarios, los agricultores más afectados por estas fluctuaciones pueden quedar atrapados en ciclos de endeudamiento, limitando aún más su capacidad de inversión y crecimiento.
  -->
+{{< embed notebooks/opt_anual.ipynb#cluster >}}
+
 
 # Resultados
 
+La siguiente sección presenta la estimación de ponderaciones óptimas se realizó para determinar la composición del portafolio agrícola correspondiente al primer trimestre de 2023. El análisis se fundamenta en datos históricos del período 2002-2022, a partir de los cuales se estimaron los retornos medios y la varianza de la canasta de cultivos seleccionados. Se estableció una tasa libre de riesgo del 8%, calculada como la media redondeada de la tasa de los instrumentos a un año del Banco Central durante el período de estudio. Las ponderaciones resultantes representan la distribución óptima de cultivos a implementar en 2023.
+
+El análisis de resultados se estructura en dos componentes principales. El primero comprende la estimación del portafolio de máximo rendimiento ajustado por riesgo, visualizado mediante la frontera eficiente y determinado por el punto de tangencia con la Línea del Mercado de Capitales (CML). Este componente incluye un análisis detallado de las características estadísticas del portafolio resultante, incluyendo media, desviación estándar y CVaR en diversos niveles de confianza, validando los resultados mediante su correlación con el análisis exploratorio de rentabilidades.
+
+El segundo componente examina la evolución de las ponderaciones en función de las preferencias de riesgo del agricultor. Este análisis evalúa la robustez de la optimización al examinar cómo varían las asignaciones de cultivos ante cambios en las ponderaciones del riesgo del portafolio y en las métricas de riesgo seleccionadas por el agricultor.
+
+## Estimación del portafolio de máximo Sharpe Ratio
+
+### La Frontera Eficiente del Portafolio Agrícola
+
+{{< embed notebooks/opt_anual.ipynb#efficient-frontier-plot >}}
+
+La resolución iterativa del problema de optimización para diferentes niveles de riesgo genera el conjunto de portafolios que conforman la frontera eficiente, representada en la gráfica por la curva amarilla. Esta curva ilustra la relación fundamental entre riesgo y rendimiento en el contexto de la diversificación agrícola, donde cada punto representa una combinación óptima de cultivos para un nivel específico de riesgo.
+
+La geometría de la frontera eficiente estimada exhibe características particulares que merecen atención. Iniciando en el extremo inferior izquierdo, donde se encuentra el portafolio de mínima varianza con una desviación estándar cercana al 1000%, la curva asciende de manera cóncava hasta alcanzar retornos esperados superiores al 150000%. Esta concavidad refleja los rendimientos marginales decrecientes en la relación riesgo-retorno: a medida que se incrementa el riesgo asumido, los aumentos en el retorno esperado son proporcionalmente menores.
+
+El portafolio óptimo, señalado con una estrella roja en la gráfica, se ubica en el punto de tangencia entre la frontera eficiente y la Línea del Mercado de Capitales (CML). Este punto específico, con una desviación estándar aproximada de 2000% y un retorno esperado de 65000%, representa la combinación de cultivos que maximiza el ratio de Sharpe, ofreciendo la mejor compensación entre riesgo y rendimiento dado el entorno de mercado y la tasa libre de riesgo establecida del 8%.
+
+La magnitud de los valores observados en los ejes requiere una contextualización específica: las elevadas cifras de retorno y riesgo son características inherentes del sector agrícola, donde la variabilidad climática y las condiciones de mercado pueden generar fluctuaciones significativas en los resultados financieros. Esta volatilidad intrínseca subraya la importancia crítica de una diversificación óptima en la planificación agrícola. Es pertinente señalar que, si bien pueden existir limitaciones en los datos de entrada utilizados, estas no comprometen la robustez metodológica del análisis ni la validez de las conclusiones obtenidas.
+
+### Composición del Portafolio Óptimo
+
 {{< embed notebooks/opt_anual.ipynb#pie-plot >}}
 
+El portafolio óptimo identificado mediante la optimización de Markowitz exhibe una distribución significativa en cuatro cultivos principales: Auyama (34.2%), Yautía (29.0%), Guineo (28.4%) y Aguacate (6.1%), con el restante 2.3% distribuido entre otros rubros. Esta composición refleja una estrategia sofisticada de optimización que equilibra la maximización del retorno esperado con la gestión efectiva del riesgo mediante diversificación.
+
+La asignación de pesos demuestra una marcada preferencia por cultivos de alta rentabilidad esperada, donde la Auyama, el Aguacate y la Yautía se encuentran entre los cuatro cultivos más rentables del universo analizado. Sin embargo, la inclusión del Guineo, que presenta una rentabilidad esperada negativa, revela la importancia de las correlaciones en la construcción del portafolio. El Guineo exhibe una correlación negativa significativa con la Auyama, actuando como una cobertura natural contra las fluctuaciones adversas en el rendimiento del cultivo principal.
+
+Este patrón de diversificación se sustenta en la estructura de correlaciones observada en el mapa de calor presentado. Los cultivos seleccionados mantienen correlaciones moderadas entre sí (aproximadamente 0.25 entre Auyama, Yautía y Aguacate), mientras que el Guineo proporciona el beneficio adicional de la correlación negativa. Esta estrategia de diversificación permite al portafolio mantener un perfil de riesgo-retorno favorable, donde las pérdidas potenciales en un cultivo pueden ser compensadas por el rendimiento positivo en otros.
+
+La asignación residual del 2.3% a otros cultivos representa un refinamiento adicional en la diversificación, aunque su impacto marginal en la reducción del riesgo del portafolio es limitado debido a sus mayores correlaciones con los componentes principales. Esta estructura de portafolio resultante demuestra la efectividad del modelo de optimización en la identificación de una combinación de cultivos que maximiza el ratio de Sharpe mientras mantiene una exposición controlada a los diversos factores de riesgo del mercado agrícola.
+
+### 
+
+{{< embed notebooks/opt_anual.ipynb#histogram >}}
+
+El análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de 252.57%, acompañado de una desviación estándar de 105.05%, lo que resulta en un ratio de Sharpe de 2.40. Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P 500 para 2024 es de 2.05, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil. 
+
+Las medidas alternativas de dispersión ofrecen una perspectiva más profunda sobre la variabilidad de los retornos. La Desviación Media Absoluta (MAD) de 78.69% y la Desviación Media Geométrica (GMD) de 119.87% reflejan la naturaleza asimétrica de los retornos agrícolas, una característica inherente al sector debido a múltiples factores. Esta asimetría surge principalmente de la exposición a riesgos climáticos no lineales, la estacionalidad de la producción, y las dinámicas de precios en mercados agrícolas frecuentemente ilíquidos. La diferencia significativa entre MAD y GMD evidencia la presencia de eventos extremos que requieren especial atención en la gestión de riesgos.
+
+Las métricas de riesgo proporcionan información crucial para la planificación de contingencias. El Valor en Riesgo (VaR) al 95% de confianza indica una pérdida máxima potencial de 70.58%, mientras que el CVaR señala una pérdida esperada de 18.02% en el 5% de los escenarios más adversos. Esta cuantificación del riesgo tiene implicaciones prácticas directas: por ejemplo, sugiere que la cobertura de seguros podría optimizarse para proteger contra pérdidas máximas del 70.58%, en lugar de asegurar el valor total de la producción, resultando en una gestión más eficiente de los costos de protección.
+
+Las medidas de riesgo de cola complementarias, EVaR (15.86%) y RLVaR (15.66%), junto con la peor realización histórica observada de 15.40%, confirman la robustez de la estrategia de diversificación. La convergencia de estas métricas alrededor del 15-18% sugiere que, incluso en escenarios extremadamente adversos, las pérdidas se mantienen en niveles manejables para operaciones agrícolas adecuadamente capitalizadas. Este perfil de riesgo es especialmente relevante para la sostenibilidad operativa, ya que permite mantener un flujo de caja estable incluso durante períodos desfavorables.
+
+La asimetría positiva en la distribución de retornos, evidenciada por la diferencia sustancial entre la media y las medidas de riesgo de cola, indica que el portafolio está estructurado para capturar beneficios significativos en condiciones favorables de mercado mientras mantiene una protección efectiva contra pérdidas extremas. Esta característica es fundamental para la viabilidad a largo plazo de las operaciones agrícolas, donde la resiliencia ante condiciones adversas es tan crucial como la capacidad de aprovechar oportunidades de mercado favorables.
+
+## Análisis de sensibilidad
+
+{{< embed notebooks/opt_anual.ipynb#efficient-frontier-by-risk >}}
+
+{{< embed notebooks/opt_anual.ipynb#wheights-by-risk-metric-plot >}}
+
 # Conclusiones
+
+
+# Anexos
+
+{{< embed notebooks/opt_anual.ipynb#port-opt >}}
+
+{{< embed notebooks/opt_anual.ipynb#wheights-by-risk-metric >}}
+

@@ -1,0 +1,153 @@
+---
+title: "Análisis Exploratorio de Datos"
+format: typst
+execute:
+  cache: true
+---
+
+# Cargas las librerías y el dataset
+
+```{r}
+#| warning: false
+#| label: import
+
+library(here)
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(psych)
+library(dplyr)
+library(gt)
+```
+
+```{r}
+#| warning: false
+#| label: read-excel
+ds <- read_excel(here::here("data/dataset.xlsx"), sheet = "data_anual") %>%
+    clean_names()
+```
+
+# Estadísticas descriptivas por rubro
+
+```{r}
+#| warning: false
+#| label: descriptive-stats
+#| fig-cap: "Estadísticas descriptivas de la rentabilidad por rubro"
+stats <- ds %>%
+    group_by(rubro) %>%
+    summarise(
+        describe_stats = list(psych::describe(rentabilidad_anual))
+    ) %>%
+    unnest_wider(describe_stats)
+
+stats <- stats %>%
+    select(rubro, mean, median, sd, min, max, sd / mean) %>%
+    mutate(across(where(is.numeric), ~ . * 100)) %>%
+    arrange(desc(mean))
+
+colnames(stats) <- c("Rubro", "Media (%)", "Mediana (%)", "Desviación Estándar (%)", "Mínimo (%)", "Máximo (%)", "Coef. de Variación (%)")
+
+stats %>%
+    mutate(across(where(is.numeric), ~ paste0(round(.x, 2), "%"))) %>%
+    gt() %>%
+    tab_header(
+        title = "Estadísticas Descriptivas por Rubro (En Porcentajes)"
+    )
+```
+
+# Costos anuales por Rubro
+```{r}
+#| warning: false
+#| label: cost-by-crop
+#| fig-cap: "Histórico de costos anuales por rubro"
+ds %>%
+    ggplot(aes(x = ano, y = costos_en_rd, color = rubro, group = rubro)) +
+    geom_line(linewidth = 1) +
+    geom_point(size = 1) +
+    labs(
+        title = "Costos por Rubro",
+        subtitle = "Costos anuales en RD$/kg",
+        x = "Año",
+        y = "Costo (RD$/kg)",
+        color = "Rubro"
+    ) +
+    scale_color_brewer(palette = "Paired") +
+    scale_x_continuous(
+        breaks = seq(2010, 2022, by = 4), #
+        limits = c(2010, 2022)
+    ) +
+    theme_minimal(base_size = 1) +
+    theme(
+        legend.position = "none",
+        plot.title = element_text(face = "bold", hjust = 0.5, size = 20),
+        plot.subtitle = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 8, angle = 45, hjust = 1),
+        axis.text.y = element_text(size = 8),
+        strip.text = element_text(size = 14, face = "bold")
+    ) +
+    facet_wrap(~rubro, scales = "free_y", ncol = 3)
+```
+
+
+# Precio por rubro
+
+```{r}
+#| warning: false
+#| #| label: price-by-crop
+#| fig-cap: "Histórico de precios por rubro agrícola"
+ds %>%
+    ggplot(aes(x = ano, y = precio_kg, color = rubro, group = rubro)) +
+    geom_line(linewidth = 1) +
+    geom_point(size = 1) +
+    labs(
+        title = "Evolución de los precios por rubro",
+        subtitle = "Precios anuales en RD$/kg",
+        x = "Año",
+        y = "Precio (RD$/kg)",
+        color = "Rubro"
+    ) +
+    scale_color_brewer(palette = "Paired") +
+    scale_x_continuous(
+        breaks = seq(2010, 2022, by = 4), #
+        limits = c(2010, 2022)
+    ) +
+    theme_minimal(base_size = 1) +
+    theme(
+        legend.position = "none",
+        plot.title = element_text(face = "bold", hjust = 0.5, size = 20),
+        plot.subtitle = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 8, angle = 45, hjust = 1),
+        axis.text.y = element_text(size = 8),
+        strip.text = element_text(size = 14, face = "bold")
+    ) +
+    facet_wrap(~rubro, scales = "free_y", ncol = 3)
+```
+
+# Rentabilidad anual por Rubro
+```{r}
+#| warning: false
+#| label: fig-
+#| fig-cap: "Rentabilidad anual por rubro agrícola"
+ds %>%
+    ggplot(aes(x = ano, y = rentabilidad_anual * 100, group = rubro, color = rubro)) +
+    geom_line(linewidth = 1) +
+    geom_point(size = 1) +
+    labs(
+        title = "Rentabilidad Anual por Rubro",
+        subtitle = "Variación porcentual año a año",
+        x = "Año",
+        y = "Rentabilidad Anual (%)"
+    ) +
+    scale_color_brewer(palette = "Paired") +
+    scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+    theme_minimal(base_size = 1) +
+    theme(
+        legend.position = "none",
+        plot.title = element_text(face = "bold", hjust = 0.5, size = 20),
+        plot.subtitle = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 8, angle = 45, hjust = 1),
+        axis.text.y = element_text(size = 8),
+        strip.text = element_text(size = 14, face = "bold")
+    ) +
+    facet_wrap(~rubro, scales = "free_y", ncol = 3)
+```

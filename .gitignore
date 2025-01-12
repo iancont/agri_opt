@@ -4,3 +4,5 @@
 .Rhistory
 /_extensions
 
+.Rproj.user
+/.venv
