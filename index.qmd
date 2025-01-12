@@ -9,7 +9,7 @@ format:
 
 # Introducción
 
-El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3\%$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4\%$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
+El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3\%$ del Producto Interno Bruto y generando empleo para aproximadamente $361,063$ personas. Las exportaciones agrícolas constituyen el $6.4\%$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
 
 Una preocupación primordial es la estructura poco concentrada de la propiedad de la tierra, donde el $77\%$ de los productores operan parcelas menores a $4.5$ hectáreas, mientras que el $10\%$ de los grandes productores controlan el $61\%$ de la tierra agrícola. Esta distribución asimétrica genera barreras sustanciales para que los pequeños productores alcancen economías de escala y accedan a instrumentos sofisticados de gestión de riesgos. La situación se agrava por una infraestructura rural deficiente, incluyendo sistemas de riego inadecuados, instalaciones de almacenamiento limitadas y redes de transporte subdesarrolladas, lo que incrementa significativamente los costos de producción y transacción.
 
@@ -279,3 +279,8 @@ Las implicaciones de estos hallazgos son particularmente relevantes para el cont
 ![Evolución de las Rentabilidades por Rubros Agrícolas, 2002-2022](notebooks/eda/profitability_by_crop.png){#fig-profit_by_crop}
 
 {{< pagebreak >}}
+
+# Referencias
+
+::: {#refs}
+:::

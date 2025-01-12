@@ -316,7 +316,7 @@
 #pagebreak()
 = Introducción
 <introducción>
-El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3 %$ del Producto Interno Bruto y generando empleo para aproximadamente 361,063 personas. Las exportaciones agrícolas constituyen el $6.4 %$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
+El sector agrícola en la República Dominicana juega un papel fundamental en el desarrollo económico nacional, representando el $3 %$ del Producto Interno Bruto y generando empleo para aproximadamente $361 , 063$ personas. Las exportaciones agrícolas constituyen el $6.4 %$ de las exportaciones totales, evidenciando la importancia estratégica del sector en el comercio internacional. Sin embargo, un análisis detallado revela ineficiencias estructurales y fallas de mercado significativas que restringen su potencial de desarrollo.
 
 Una preocupación primordial es la estructura poco concentrada de la propiedad de la tierra, donde el $77 %$ de los productores operan parcelas menores a $4.5$ hectáreas, mientras que el $10 %$ de los grandes productores controlan el $61 %$ de la tierra agrícola. Esta distribución asimétrica genera barreras sustanciales para que los pequeños productores alcancen economías de escala y accedan a instrumentos sofisticados de gestión de riesgos. La situación se agrava por una infraestructura rural deficiente, incluyendo sistemas de riego inadecuados, instalaciones de almacenamiento limitadas y redes de transporte subdesarrolladas, lo que incrementa significativamente los costos de producción y transacción.
 
@@ -328,7 +328,7 @@ La ausencia de herramientas efectivas de gestión de riesgos en la agricultura d
 
 En la práctica, los agricultores dominicanos carecen de estrategias efectivas para la mitigación de riesgos. Aunque la diversificación de cultivos podría teóricamente ayudar a gestionar el riesgo, la mayoría de los productores no tienen suficiente extensión de tierra para implementar estrategias de diversificación efectivas. Aquellos que intentan diversificar a menudo lo hacen de manera subóptima, típicamente basando sus decisiones en los rendimientos del año anterior en lugar de un análisis comprensivo de riesgo-retorno. Este enfoque no considera las condiciones cambiantes del mercado ni la evolución del panorama de riesgos.
 
-Ante esta problemática, la presente investigación propone desarrollar una metodología de optimización ajustada por riesgo para la selección de cultivos agrícolas que maximice los beneficios económicos de los productores. Basándonos en el trabajo de @miao_optimization_2023, quien aplicó la teoría de portafolio a la asignación de recursos agrícolas, proponemos un marco que maximiza los rendimientos ajustados por riesgo considerando las restricciones específicas que enfrentan los agricultores dominicanos. La innovación clave de nuestra metodología radica en su enfoque agnóstico a las fallas del mercado, proporcionando una herramienta práctica para optimizar la selección de cultivos dentro de las restricciones existentes, sin requerir cambios institucionales o nuevos instrumentos financieros.
+Ante esta problemática, la presente investigación propone desarrollar una metodología de optimización ajustada por riesgo para la selección de cultivos agrícolas que maximice los beneficios económicos de los productores. Basándonos en el trabajo de (Miao et~al., 2023), quien aplicó la teoría de portafolio a la asignación de recursos agrícolas, proponemos un marco que maximiza los rendimientos ajustados por riesgo considerando las restricciones específicas que enfrentan los agricultores dominicanos. La innovación clave de nuestra metodología radica en su enfoque agnóstico a las fallas del mercado, proporcionando una herramienta práctica para optimizar la selección de cultivos dentro de las restricciones existentes, sin requerir cambios institucionales o nuevos instrumentos financieros.
 
 Esta metodología representa un mecanismo de tecnificación implícita que permite mejorar la productividad de la cosecha sin necesidad de aumentar significativamente el capital inicial. A través de la optimización sistemática de la selección de cultivos, los agricultores pueden maximizar sus beneficios económicos mientras gestionan efectivamente los riesgos inherentes a la producción agrícola.
 
@@ -569,7 +569,7 @@ supplement: "Figura",
 <fig-histogram>
 
 
-Como se puede observar en @fig-histogram, el análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de $252.57 %$,, acompañado de una desviación estándar de $105.05 %$,, lo que resulta en un ratio de Sharpe de $2.40$ #cite(<noauthor_sp_nodate>, form: "prose");. Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P \$5004 para $2024$ es de $2.05$,, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil.
+Como se puede observar en @fig-histogram, el análisis de la distribución de retornos del portafolio óptimo revela características estadísticas fundamentales para la planificación agrícola efectiva. El portafolio muestra un retorno esperado notable de $252.57 %$,, acompañado de una desviación estándar de $105.05 %$,, lo que resulta en un ratio de Sharpe de $2.40$ #emph[S&P 500 PR (SPX) Risk Morningstar] (s.~f.). Este nivel de eficiencia en la relación riesgo-retorno es particularmente destacable cuando se compara con referencias de mercado establecidas: el ratio Sharpe del S&P \$5004 para $2024$ es de $2.05$,, lo que sugiere que la estrategia de diversificación agrícola propuesta logra una eficiencia comparable a la del mercado de valores estadounidense. Obviamente, sin considerar los riesgos de liquidez implícitos que existen en la inversión agrícola con respecto a la inversión bursátil.
 
 Las medidas alternativas de dispersión ofrecen una perspectiva más profunda sobre la variabilidad de los retornos. La Desviación Media Absoluta (MAD) de $78.69 %$, y la Desviación Media Geométrica (GMD) de $119.87 %$, reflejan la naturaleza asimétrica de los retornos agrícolas, una característica inherente al sector debido a múltiples factores. Esta asimetría surge principalmente de la exposición a riesgos climáticos no lineales, la estacionalidad de la producción, y las dinámicas de precios en mercados agrícolas. La diferencia significativa entre MAD y GMD evidencia la presencia de eventos extremos que requieren especial atención en la gestión de riesgos.
 
@@ -710,9 +710,34 @@ supplement: "Figura",
 
 
 #pagebreak()
+= Referencias
+<referencias>
+#block[
+#block[
+Cajas, D. (2024). #emph[Riskfolio-Lib (6.3.1)];. #link("https://github.com/dcajasn/Riskfolio-Lib")
+
+] <ref-cajas_riskfolio-lib_2024>
+#block[
+#emph[Chapter II: The Geography of the Efficient Frontier William N. Goetzmann];. (s.~f.). Recuperado 12 de enero de 2025, de #link("https://viking.som.yale.edu/an-introduction-to-investment-theory/chapter-ii-the-geography-of-the-efficient-frontier/")
+
+] <ref-noauthor_chapter_nodate>
+#block[
+FAO. (2022). #emph[Organización de las Naciones Unidas para la Alimentación y la Agricultura: La FAO: \"El campo dominicano enfrenta los desafíos impuestos por el cambio climático\" FAO en República Dominicana Organización de las Naciones Unidas para la Alimentación y la Agricultura];. #link("https://www.fao.org/republica-dominicana/noticias/detail-events/es/c/1607378/")
+
+] <ref-fao_organizacion_2022>
+#block[
+Miao, B.-L., Liu, Y., Fan, Y.-B., Niu, X.-J., Jiang, X.-Y., & Tang, Z. (2023). Optimization of Agricultural Resource Allocation among Crops: A Portfolio Model Analysis. #emph[Land];, #emph[12];(10), 1901. #link("https://doi.org/10.3390/land12101901")
+
+] <ref-miao_optimization_2023>
+#block[
+Solano, J. (2024). #emph[Estos son los retos del sector agropecuario en República Dominicana];. #link("https://acento.com.do/economia/estos-son-los-retos-del-sector-agropecuario-en-republica-dominicana-9390988.html")
+
+] <ref-solano_estos_2024>
+#block[
+#emph[S&P 500 PR (SPX) Risk Morningstar. Morningstar, Inc.] (s.~f.). Recuperado 12 de enero de 2025, de #link("https://www.morningstar.com/indexes/spi/spx/risk");Learn how risky the companies S&P 500 PR tracks are, to decide if S&P 500 PR is a good benchmark for you.
+
+] <ref-noauthor_sp_nodate>
+] <refs>
 
 
-
-
-#bibliography("references.bib")
 

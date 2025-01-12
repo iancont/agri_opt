@@ -37,6 +37,8 @@ affiliations:
 
 toc: true
 bibliography: references.bib
+citeproc: true
+csl: https://www.zotero.org/styles/apa-with-abstract
 lang: es
 
 nocite: |
