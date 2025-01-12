@@ -21,15 +21,13 @@ Sin embargo, existen ineficiencias estrucuturales y fallas del mercado que limit
 
 El sector agrícola dominicano enfrenta serios desafíos que limitan su desarrollo y crecimiento:
 
--   **Alta concentración de la propiedad de la tierra**. El $77\%$ de los productores operan parcelas menores a 4.5 hectáreas, mientras que el 10% de los grandes productores: controlan el $61\%$ de la tierra agrícola.
-
-    -   Esto genera una barrera para que los pequeños productores alcancen economías de escalas.
-
-    -   Impide que los nuevos productores accendan a instrumentos sofisticados de gestión de riesgos.
+-   **Desigualadad estrcutural en la tenencia de la tierra**. El $77\%$ de los productores operan parcelas menores a 4.5 hectáreas, mientras que el 10% de los grandes productores: controlan el $61\%$ de la tierra agrícola.
 
 -   **Infraetrcutura rural deplorable**. Sistemas de riego inadecuado, instalaciones de almacenamiento limitada, redes de trasnporte subdesarrolada, etc.
 
--   **Alto nivel de informalidad y bajo nivel de educación financiera**.
+-   **Alto nivel de informalidad y bajo nivel de educación financiera**. Esto impide que dichos productores tengan acceso al financimiento.
+
+-   **Cobertura limitada a riesgos climáticos**. Los seguros agropecuarios ofrecidos solo protegen a los productores ante eventualidades climáticas pero no contemplan riesgos de mercado, fluctuaciones de precios, etc.
 
 ## Riesgos del sector
 
@@ -47,11 +45,11 @@ El sector agrícola dominicano enfrentan riesgos de caractér multidimensional, 
 
 -   **Próposito**
 
-    Desarrollar una metodología de optimización agrícola ajustada por riesgo para maximizar los beneficios económicos de los agricultores, gestionando riesgos y mejorando la productividad sin requerir significativas inversiones adicionales o cambios institucionales.
+Generar una metodología alternativa y de baja inversión de capital para la planificación de cultivos, que permita mitigar los riesgos inherentes del mercado y maximizar los beneficios.
 
 -   **Objetivo**
 
-Desarrollar y validar una metodología de optimización de portafolio que permita a los agricultores dominicanos maximizar rendimientos ajustados por riesgo mediante una selección óptima de cultivos, considerando restricciones locales y contribuyendo a la sostenibilidad económica del sector agrícola.
+Crear un modelo matemática de optimización que permita maximizar rendimientos ajustados por riesgos a través de la selección óptima de cultivos, mejorando la sostenibilidad del sector agrícola dominicano.
 
 ## Matríz técnica para el cálculo de la rentabilidad por rubro Agrícola
 
@@ -69,10 +67,8 @@ $$
 
 -   Ciclo de cosecha del cultivo.
 
-El numerador refleja los beneficios netos, considerando la diferencia entre los ingresos (productividad multiplicada por precio) y los costos de producción. El denominador, que incluye únicamente los costos totales, permite estandarizar los rendimientos relativos, haciéndolos comparables entre cultivos.
+## Ventajas
 
--   **Ventajas**
+-   Facilita la evaluación de rentabilidad sin depender del tamaño de la finca ni del capital inicial, adaptándose a diversas restricciones del mercado agrícola.
 
-    -   Facilita la evaluación de rentabilidad sin depender del tamaño de la finca ni del capital inicial, adaptándose a diversas restricciones del mercado agrícola.
-
-    -   La normalización por costos hace que la comparación sea equitativa entre cultivos con diferentes ciclos y frecuencias de cosecha, resaltando la eficiencia económica de cada rubro.
+-   La normalización por costos hace que la comparación sea equitativa entre cultivos con diferentes ciclos y frecuencias de cosecha, resaltando la eficiencia económica de cada rubro.
