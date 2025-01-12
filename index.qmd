@@ -124,7 +124,7 @@ Donde:
 
 6. $Aw \leq B$: representa un conjunto de restricciones lineales.
 
-7. $\phi_i(w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discución. 
+7. $\phi_i(w)$: son $20$ medidas de riesgo disponibles. Las medidas de riesgo disponibles son varianza, semi-varianza, valor en riesgo (VaR), y otras medidas de riesgo a la baja. La manera de medir el riesgo tomara relevancia más adelante en la discusión. 
 
 Al resolver estos problemas de optimización, se obtienen asignaciones de cultivos que minimizan la volatilidad (varianza) para un determinado umbral de rentabilidad o, de manera equivalente, que maximizan los retornos sin sobrepasar el riesgo prefijado. En consecuencia, se estaría construyendo la "frontera eficiente", que representa todas de asignaciones de recursos a los distintos rubros agrícolas que brindan el mayor rendimiento esperado para cada nivel de riesgo o, de manera equivalente, el menor riesgo para un nivel de rendimiento específico.
 
