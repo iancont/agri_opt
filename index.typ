@@ -296,10 +296,10 @@
 #show: doc => article(
   title: [Optimización de Portafolio Agrícola: Una Alternativa para la Mitigación de Riesgos en la República Dominicana],
   authors: (
-    ( name: [Ian Contreras],
+    ( name: [Ian Contreras (1116048)],
       affiliation: [],
       email: [] ),
-    ( name: [Elvis Lagrange],
+    ( name: [Elvis Lagrange (1109064)],
       affiliation: [],
       email: [] ),
     ),

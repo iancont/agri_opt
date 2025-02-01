@@ -10,7 +10,7 @@ date: last-modified
 date-format: long
 
 author:
-  - name: Ian Contreras
+  - name: Ian Contreras (1116048)
     emails:
       - personal: contreras.mejia@hotmail.com
       - institutional: 1116048@est.intec.edu.do
@@ -20,7 +20,7 @@ author:
     attributes:
       corresponding: true
   
-  - name: Elvis Lagrange
+  - name: Elvis Lagrange (1109064)
     affiliations:
       id: Intec
     attributes:
